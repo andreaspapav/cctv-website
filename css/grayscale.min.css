@@ -34,3 +34,17 @@ td{
 	border-top: 3px solid black;
 	padding-bottom: 0.7rem;
 }
+
+.sketch{
+	width: 55%;
+	display: block;
+	padding: 0rem 1rem 0rem 1rem;
+
+
+}
+
+.images-text{
+	text-align: justify;
+	height: 42vh;
+
+}
