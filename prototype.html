@@ -124,32 +124,32 @@
           <div class="row"> 
             <div class="column">
               <h3 align="left"><u>IMAGE RECOGNITION</u></h3>
-              <img class="sketch" src="img/sketches/xxx.jpg" align="right">
-              <p class="text-black-100 images-text"><br>For this particular API developed from last year, we used a desktop with gtx1050Ti graphic card to install the API for testing purpose. The reason why we are using such powerful GPU is because of the CUDA required from the tensorflow package and the API requires GPU optimized machine in order to be installed.
+              <img class="sketch" src="img/image-api.jpg" align="right" style="width:40%;">
               <br>
-              <br>
-              Here are the dependencies required from installing the Image Recognition API from last year:
-              <br>
-                <br>- Tensorflow
-                <br>- Openpose
-              <br>
-              <br>
-              After the API is installed, we will have to configure the API to make sure that the API will capture the video placed in the certain directory as an input and output the video which contains the processed data in another directory. After that, Andreas who was in charge of this part has to pass the information about the API installation to Shiko who is in charge of the system architecture and push the configured API to github.
-              <br>
-              <br>
-              Here is the information list required for passing the API installation to Shiko:
-              <br>
-                <br>- Name and the version of the Softwares have to be installed
-                <br>- Order and procedure of installing the Softwares            
+              <p class="text-black-100" style="text-align:justify;">
+                  For this particular API we used a desktop computer with NVIDIA GTX1050 Ti graphics card in order to be able to use Openpose. 
+                  Openpose is an open-source library created in CMU(Carnegie Mellon University) which represents a real-time muli-person system 
+                  that detects human body and tracks it in video footage, images or live video feed from a camera. The reason for using a desktop 
+                  with a powerful graphics card is due to the use of CUDA, an NVIDIA tool for enhancing the performance of GPU to smoothly perform 
+                  compute-intensive applications such as Image Recognition.
+                  <br><br>
+                  The API is still not completely finished as the data returned from the Openpose library need to be passed within Tensorflow. 
+                  Tensorflow is an open source machine learning framework which will be used to understand what the people recognized by the Image Recognition 
+                  are doing and make it cleverer and better over time. This is the most important part of this API as anti-social behaviors need to be spotted 
+                  with as much accuracy as possible. 
+                  <br><br>
+                  The dependencies required for installing the Image Recognition API are listed below:
+                  <br><br>
+                  -	Tensorflow <br>
+                  -	Openpose <br>
+                  -	OpenCV <br>
               </p>
-              <br>
-              <br>
-              <br>
 
-
-              <h3 align="right"><u>FACE & OBJECT RECOGNITION</u></h3>
+              <h3><u>FACE & OBJECT RECOGNITION</u></h3>
               <img class="sketch" src="img/sketches/xxx.png" align="left">
-              <p class="text-black-100 images-text">The same procedure of installing and configuring the API will be performed by Shun Shao who is in charge of face and object recognition. Shun is also using his own machine to install and configure the APIs with the specs.<br>
+              <p class="text-black-100" style="text-align:justify;">The same procedure of installing and configuring the API will be performed by Shun Shao 
+                who is in charge of face and object recognition. Shun is also using his own machine to install and configure the APIs with the specs.
+              <br>
               <br>
               The detail about the face recognition installation.
               Here are the dependencies required for face recognition:
@@ -165,30 +165,17 @@
               </p>
               <br>
 
-
-
-
-
-
-
               <h3 align="left"><u>USER INTERFACE</u></h3>
               <img class="sketch" src="img/sketches/xxx.png" align="right">
-              <p class="text-black-100 images-text">According to the client requirement, they have no requirement for having a user interface for using this CCTV AI application. So we implemented a very simple web application just to display the video which has been processed by the APIs for testing if our web application is functional.
+              <p class="text-black-100" style="text-align:justify;">According to the client requirement, they have no requirement for having a user interface for using this CCTV AI application. So we implemented a very simple web application just to display the video which has been processed by the APIs for testing if our web application is functional.
               <br>
               <br>
               The web application is written in HTML, CSS and Bootstrap.css. It is non-responsive and designed for 1280 X 720 resolution screen since this is the typical screen will be used in the CCTV monitoring centre. The web application will display the processed video located in the output directory from the APIs.
               </p>
 
-
-
-
-
-
-
-
               <h3 align="right"><u>CLOUD BASED INFRASTRUCTURE</u></h3>
               <img class="sketch" src="img/sketches/xxx.png" align="left">
-              <p class="text-black-100 images-text">After gathering all the components of the web application, we will rent a ubuntu virtual machine in Azure and put all the APIs and the web application in it. Since this is an image rendering focused project, we rent a GPU optimized virtual machine with Standard NC6 powered by the Nvidia Tesla K80 which is enough for developing our image recognition project.
+              <p class="text-black-100" style="text-align:justify;">After gathering all the components of the web application, we will rent a ubuntu virtual machine in Azure and put all the APIs and the web application in it. Since this is an image rendering focused project, we rent a GPU optimized virtual machine with Standard NC6 powered by the Nvidia Tesla K80 which is enough for developing our image recognition project.
               <br>
               <br>
               Firstly, we installed the apache HTTP server and pulled the web application from the github, and test if the web application is functional by clicking the url of the virtual machine. Secondly, we installed the APIs and follow the installation instruction generated from Andreas and Shun who are responsible for the API development. Finally, after the directory configuration of both the APIs and the web application, when you click on the url of the virtual machine you should be able to see the video which has been processed by the APIs.
