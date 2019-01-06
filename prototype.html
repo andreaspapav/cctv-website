@@ -116,6 +116,7 @@
         <div class="col-lg-12 text-center">
           <h1 class="section-heading text-uppercase">Implementation of finished functionalities</h1>
           <p class="line"></p>
+          <p class="text-black-100" style="text-align: justify;" >Here is the procedure of how we managed to combine the APIs, Webapp and Azure VM together in the Azure cloud platform:</p>
           <br>
           <br>
 
@@ -124,27 +125,42 @@
             <div class="column">
               <h3 align="left"><u>IMAGE RECOGNITION</u></h3>
               <img class="sketch" src="img/sketches/xxx.jpg" align="right">
-              <p class="text-black-100 images-text">AI person needs to explain this<br></p>
+              <p class="text-black-100 images-text"><br>For this particular API developed from last year, we used a desktop with gtx1050Ti graphic card to install the API for testing purpose. The reason why we are using such powerful GPU is because of the CUDA required from the tensorflow package and the API requires GPU optimized machine in order to be installed.
+              <br>
+              <br>
+              Here is the depencies required from installing the Image Recognition API from last year:
+              <ul>
+                <li>Tensorflow</li>
+                <li>Openpose</li>
+              </ul>
+              After the API is installed, we will have to configure the API to make sure that the API will capture the video placed in the certain directory as an input and output the video which contains the processed data in another directory. After that, Andreas who was in charge of this part has to pass the information about the API installation to Shiko who is in charge of the system architecture and push the configured API to github.
+              <br>
+              <br>
+              Here is the information list required for passing the API installation to Shiko:
+              <ul>
+                <li>Name and the version of the Softwares have to be installed</li>
+                <li>Order and procedure of installing the Softwares</li>
+              </ul>
+              </p>
               <br>
 
-              <h3 align="right"><u>FACE RECOGNITION</u></h3>
+              <h3 align="right"><u>FACE & OBJECT RECOGNITION</u></h3>
               <img class="sketch" src="img/sketches/xxx.png" align="left">
-              <p class="text-black-100 images-text">AI person needs to explain this<br></p>
+              <p class="text-black-100 images-text">The same procedure of installing and configuring the API will be performed by Shun Shao who is in charge of face and object recognition.<br></p>
               <br>
 
-              <h3 align="left"><u>OBJECT RECOGNITION</u></h3>
-              <img class="sketch" src="img/sketches/xxx.png" align="right">
-              <p class="text-black-100 images-text">AI person needs to explain this<br></p>
-              <br>
-
-              <h3 align="right"><u>CLOUD BASED INFRASTRUCTURE</u></h3>
-              <img class="sketch" src="img/sketches/xxx.png" align="left">
-              <p class="text-black-100 images-text"><br>Using Azure to run the all components in a virtual machine, and we can scale up or down according to the demand.</p>
-              <br>
 
               <h3 align="left"><u>USER INTERFACE</u></h3>
               <img class="sketch" src="img/sketches/xxx.png" align="right">
               <p class="text-black-100 images-text">At the prototype stage, user can use web application to view the videos which have been processed by the APIs.<br></p>
+
+
+              <h3 align="right"><u>CLOUD BASED INFRASTRUCTURE</u></h3>
+              <img class="sketch" src="img/sketches/xxx.png" align="left">
+              <p class="text-black-100 images-text"><br>
+              </p>
+              <br>
+
             </div>
           </div>
         </div>
