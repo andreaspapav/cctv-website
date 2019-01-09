@@ -48,3 +48,19 @@ td{
 	height: 42vh;
 
 }
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 0.5rem;
+}
+
+.column {
+  flex: 50%;
+  padding: 0 0.5rem;
+}
+
+.column img {
+  margin-top: 1rem;
+  vertical-align: middle;
+}
