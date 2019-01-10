@@ -127,26 +127,16 @@
 
           <div class="row"> 
             <div class="column">
-              <h3 align="left"><u>IMAGE RECOGNITION</u></h3>
+              <h3 align="left"><u>POSTURE RECOGNITION</u></h3>
               <img class="sketch" src="img/image-api.jpg" align="right" style="width:40%;">
               <br>
               <p class="text-black-100" style="text-align:justify;">
-                  For this particular API we used a desktop computer with NVIDIA GTX1050 Ti graphics card in order to be able to use Openpose. 
-                  Openpose is an open-source library created in CMU(Carnegie Mellon University) which represents a real-time muli-person system 
-                  that detects human body and tracks it in video footage, images or live video feed from a camera. The reason for using a desktop 
-                  with a powerful graphics card is due to the use of CUDA, an NVIDIA tool for enhancing the performance of GPU to smoothly perform 
-                  compute-intensive applications such as Image Recognition.
+                  Firstly, we used openpose to analyse the images to extract x and y coordinates of 18 body joints from human. Using tensorflow to extract the data of standing, sitting and laying according to the patterns of 18 body joints. After that, it outputs a dataset which consists of records of the postures (sitting, standing and laying) with 18 body joints.
                   <br><br>
-                  The API is still not completely finished as the data returned from the Openpose library need to be passed within Tensorflow. 
-                  Tensorflow is an open source machine learning framework which will be used to understand what the people recognized by the Image Recognition 
-                  are doing and make it cleverer and better over time. This is the most important part of this API as anti-social behaviors need to be spotted 
-                  with as much accuracy as possible. 
+                  Secondly, we feed the datasets into MLPclassifiers/Adaboost in order to train them. After that, it outputs a model which is equivalent to a brain with the knowledge of the behaviour of sitting, standing and laying.
                   <br><br>
-                  The dependencies required for installing the Image Recognition API are listed below:
+                  Finally, we used openpose again with the model generated to process and analyse if the input file has human who is performing sitting, standing and laying. The input file can be a JPG image, pre-saved video and live video (camera).
                   <br><br>
-                  -	Tensorflow <br>
-                  -	Openpose <br>
-                  -	OpenCV <br>
               </p>
 
               <h3><u>FACE & OBJECT RECOGNITION</u></h3>
