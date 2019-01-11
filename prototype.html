@@ -166,14 +166,14 @@
               <p class="text-black-100" style="text-align:justify;">bla bla bla</p>
 
               <h3 align="right"><u>CLOUD BASED INFRASTRUCTURE</u></h3>
-              <img class="sketch" src="img/sketches/xxx.png" align="left">
-              <p class="text-black-100" style="text-align:justify;">We rented a standard GPU family Azure machine with NC6 series of graphic card which sufficient for openpose and tensorflow to process image and extract data. And then, we hosted the Posture Recognition and a webapp for testing purpose into the server for the purpose of testing deployment of one recognition. 
+              <img class="sketch" src="img/Azure_Infrastructure.png" align="left">
+              <p class="text-black-100" style="text-align:justify;">We rented a standard GPU family Azure machine with NC6 series of graphic card which sufficient for openpose and tensorflow to process image and extract data. And then, we hosted the Posture Recognition and a webapp for testing purpose into the server for the purpose of testing deployment for one recognition. 
               <br>
               <br>
               Firstly, we installed the apache HTTP server and test if the web application is functional by clicking the url of the virtual machine. Secondly, we installed the environment for the posture recognition that we developed and test if posture recognition functions properly and outputs the processed image or video by using the webapp to check. In other words, we are treating this kind of webapp as the screen of the server.
               <br>
               <br>
-              Lastly, we used another Azure service called Azure Storage --Block Blob to store the media files which are classified into two folders: one consisting of lots of images to train the posture recognition's classifiers and the other consisting of images and videos to let the Posture Recognition to identify the sitting, standing and laying features. The virtual machine then can use HTTP to extract the media files to pass to the Posture Recognition.
+              Lastly, we used another Azure service called Azure Storage --Block Blob to store the media files which are classified into two folders: one consisting of lots of images to train the posture recognition's classifiers and the other consisting of sample images and videos to let the Posture Recognition to identify the sitting, standing and laying features. The virtual machine then can use HTTP channel to extract the media files to pass to the Posture Recognition.
               </p>
               <br>
 
