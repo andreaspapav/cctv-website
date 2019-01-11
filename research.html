@@ -115,6 +115,33 @@
                   </td>
                 </tr>
               </table>
+              <br><br><br>
+              <h2 align="left">Amazon Rekognition</h2>
+              <img align="left" src="img/aws_rekognition.png" style="width: 30%; height: 30%">
+              <p class="text-black-100" style="text-align: justify;">It is one of the AWS service which we can just add images and videos analysis to our applications. It has object, faical, celebrity, text recognition and etc, which contains all the thing we will need for the requirement.</p>
+
+              <table>
+                  <tr>
+                    <th>Advantages</th>
+                    <th>Disadvantages</th>
+                  </tr>
+                  <tr>
+                    <td><span style="font-weight: bold;">Strong recognition functionality</span>
+                  <br>- It has lots of recognition insde the AWS service compared to other API on the market.
+                </td>
+                  <td><span style="font-weight: bold;">Not Real-time</span>
+                  <br>- It supports images and videos, but not for the live streaming video which is one of the requirements from the client.
+                  </td>
+                </tr>
+                <tr>
+                  <td><span style="font-weight: bold;">Simple to use</span>
+                  <br>- Using this as a AWS service, and what you have to do is just to upload images and videos to this service.
+                </td>
+                  <td><span style="font-weight: bold;">Different Cloud Provider</span>
+                  <br>- It cannot combine with Azure Cloud services, and it can only interact with other AWS services only.
+                  </td>
+                </tr>
+              </table>
         </div>
       </div>
     </section>
@@ -127,13 +154,15 @@
           <p class="line"></p>
           <h2 align="left">Openpose</h2>
           <p class="text-black-100" style="text-align: justify;" >It is an open source library which detects human joints in the image, video or live-video. We first used a desktop machine with GTX1050Ti to install and test the API, and we find out that the openpose displays the track of the human joints for all the people displayed in the image or video, and it also outputs the json file consisting of the x and y coordinates of all the human joints. The reason why because we are using such powerful machine is because that the openpose process the image by frame by frame, hence it requires fast rendering graphic processor.</p>
-          <br><br>
+          <br>
           <h2 align="left">Tensorflow</h2>
           <p class="text-black-100" style="text-align: justify;">Since our project requires the study of human behaviour pattern in image, so we decided to have a research on TensorFlow based on GPU. Again, this requires high performace of GPU. We are thinking this open source library will be one of the essential components to link to our image recognition.</p>
+          <br>
           <h2 align="left">MLPclassifier</h2>
-          <p class="text-black-100" style="text-align: justify;">It is one of components in one of the python libraries called sklearn.</p>
+          <p class="text-black-100" style="text-align: justify;">It is one of components in one of the python libraries called sklearn. It is a classifier which learns algorithm or functions by training on a dataset. The classifier requires dataset and will generate a PKL file which enables objects to be serialized to files on disk and deserialized back into the program at runtime.</p>
+          <br>
           <h2 align="left">AdaBoost</h2>
-          <p class="text-black-100" style="text-align: justify;"></p>
+          <p class="text-black-100" style="text-align: justify;">It is also a classifier,but it is an alternative way to train the machine learning model, and it is used to boost the performance of decision trees on binary classification problems.</p>
         </div>
       </div>
 
@@ -145,7 +174,7 @@
         <div class="col-lg-12 text-center">
           <h1 class="section-heading text-uppercase">Summary of final decision</h1>
           <p class="line"></p>
-          <p class="text-black-100" style="text-align: justify;" > Wireframe description.</p>
+          <p class="text-black-100" style="text-align: justify;" > We decided to split the image recognition part into four different types of recognitions, which are facial, posture, item and tracking recognition. For posture recognition, we decided to use the combination of Tensorflow and Openpose to extract the data of specific posture in the image. And then, applying two different classifiers which are AdaBoost and MLPclassifier to train the model, but it is our choice to use one of the classifiers to see which one has a better machine learning model. </p>
         </div>
       </div>
 
@@ -157,7 +186,19 @@
         <div class="col-lg-12 text-center">
           <h1 class="section-heading text-uppercase">References</h1>
           <p class="line"></p>
-          <p class="text-black-100" style="text-align: justify;" > List of references.</p>
+          <p class="text-black-100" style="text-align: justify;" >
+            <ul>
+              <li align="left" ><h4>Amazon Rekognition: </h4><a href="https://aws.amazon.com/rekognition/">https://aws.amazon.com/rekognition/</li>
+              <br>
+              <li align="left" ><h4>Openpose: </h4><a href="https://github.com/CMU-Perceptual-Computing-Lab/openpose">https://github.com/CMU-Perceptual-Computing-Lab/openpose</a></li>
+              <br>
+              <li align="left" ><h4>TensorFlow: </h4><a href="https://www.tensorflow.org/guide/using_gpu">https://www.tensorflow.org/guide/using_gpu</li>
+              <br>
+              <li align="left" ><h4>MLPclassifier: </h4><a href="https://scikit-learn.org/stable/modules/neural_networks_supervised.html">https://scikit-learn.org/stable/modules/neural_networks_supervised.html</li>
+              <br>
+              <li align="left" ><h4>AdaBoost: </h4><a href="https://machinelearningmastery.com/boosting-and-adaboost-for-machine-learning/">https://machinelearningmastery.com/boosting-and-adaboost-for-machine-learning/</li>
+            </ul>
+          </p>
         </div>
       </div>
 
