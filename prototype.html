@@ -79,7 +79,7 @@
     <section id="project-background" class="projects-section bg-light">
       <div class="container">
         <div class="col-lg-12 text-center">
-          <h1 class="section-heading text-uppercase">System architecture diagram</h1>
+          <h1 class="section-heading text-uppercase">System architecture diagram (Shun)</h1>
           <p class="line"></p>
           <p class="text-black-100" style="text-align: justify;" >We have three separate systems to present our prototype:</p>
 
@@ -120,36 +120,28 @@
         <div class="col-lg-12 text-center">
           <h1 class="section-heading text-uppercase">Implementation of finished functionalities</h1>
           <p class="line"></p>
-          <p class="text-black-100" style="text-align: justify;" >Here is the procedure of how we managed to combine the APIs, Webapp and Azure VM together in the Azure cloud platform:</p>
+          <p class="text-black-100" style="text-align: justify;" >Overview (Shun)</p>
           <br>
           <br>
           <br>
 
           <div class="row"> 
             <div class="column">
-              <h3 align="left"><u>IMAGE RECOGNITION</u></h3>
-              <img class="sketch" src="img/image-api.jpg" align="right" style="width:40%;">
+              <h3 align="left"><u>ZONE TWO</u></h3>
+              <img class="sketch" src="img/image-api.JPG" align="right" style="width:40%;">
               <br>
               <p class="text-black-100" style="text-align:justify;">
-                  For this particular API we used a desktop computer with NVIDIA GTX1050 Ti graphics card in order to be able to use Openpose. 
-                  Openpose is an open-source library created in CMU(Carnegie Mellon University) which represents a real-time muli-person system 
-                  that detects human body and tracks it in video footage, images or live video feed from a camera. The reason for using a desktop 
-                  with a powerful graphics card is due to the use of CUDA, an NVIDIA tool for enhancing the performance of GPU to smoothly perform 
-                  compute-intensive applications such as Image Recognition.
+                  Firstly, we used openpose to analyse the images to extract x and y coordinates of 18 body joints from human. Using tensorflow to extract the data of standing, sitting and laying according to the patterns of 18 body joints. After that, it outputs a dataset which consists of records of the postures (sitting, standing and laying) with 18 body joints.
                   <br><br>
-                  The API is still not completely finished as the data returned from the Openpose library need to be passed within Tensorflow. 
-                  Tensorflow is an open source machine learning framework which will be used to understand what the people recognized by the Image Recognition 
-                  are doing and make it cleverer and better over time. This is the most important part of this API as anti-social behaviors need to be spotted 
-                  with as much accuracy as possible. 
+                  Secondly, we feed the datasets into MLPclassifiers/Adaboost in order to train them. After that, it outputs a model which is equivalent to a brain with the knowledge of the behaviour of sitting, standing and laying.
                   <br><br>
-                  The dependencies required for installing the Image Recognition API are listed below:
+                  Finally, we used openpose again with the model generated to process and analyse if the input file has human who is performing sitting, standing and laying. The input file can be a JPG image, pre-saved video and live video (camera).
                   <br><br>
-                  -	Tensorflow <br>
-                  -	Openpose <br>
-                  -	OpenCV <br>
+                  One thing that require to notice is the number of the images that we first used to train the classifiers have to be more than 10, otherwise, both MLPclassifier and Adaboost will have insufficient number of data to compare. 
+                  <br><br>
               </p>
 
-              <h3><u>FACE & OBJECT RECOGNITION</u></h3>
+              <h3 align="right"><u>ZONE ONE (Shun)</u></h3>
               <img class="sketch" src="img/sketches/xxx.png" align="left">
               <p class="text-black-100" style="text-align:justify;">The same procedure of installing and configuring the API will be performed by Shun Shao 
                 who is in charge of face and object recognition. Shun is also using his own machine to install and configure the APIs with the specs.
@@ -169,20 +161,19 @@
               </p>
               <br>
 
-              <h3 align="left"><u>USER INTERFACE</u></h3>
+              <h3 align="left"><u>DASHBOARD (Shun)</u></h3>
               <img class="sketch" src="img/sketches/xxx.png" align="right">
-              <p class="text-black-100" style="text-align:justify;">According to the client requirement, they have no requirement for having a user interface for using this CCTV AI application. So we implemented a very simple web application just to display the video which has been processed by the APIs for testing if our web application is functional.
-              <br>
-              <br>
-              The web application is written in HTML, CSS and Bootstrap.css. It is non-responsive and designed for 1280 X 720 resolution screen since this is the typical screen will be used in the CCTV monitoring centre. The web application will display the processed video located in the output directory from the APIs.
-              </p>
+              <p class="text-black-100" style="text-align:justify;">bla bla bla</p>
 
               <h3 align="right"><u>CLOUD BASED INFRASTRUCTURE</u></h3>
-              <img class="sketch" src="img/sketches/xxx.png" align="left">
-              <p class="text-black-100" style="text-align:justify;">After gathering all the components of the web application, we will rent a ubuntu virtual machine in Azure and put all the APIs and the web application in it. Since this is an image rendering focused project, we rent a GPU optimized virtual machine with Standard NC6 powered by the Nvidia Tesla K80 which is enough for developing our image recognition project.
+              <img class="sketch" src="img/Azure_Infrastructure.png" align="left">
+              <p class="text-black-100" style="text-align:justify;">We rented a standard GPU family Azure machine with NC6 series of graphic card which sufficient for openpose and tensorflow to process image and extract data. And then, we hosted the Posture Recognition and a webapp for testing purpose into the server for the purpose of testing deployment for one recognition. 
               <br>
               <br>
-              Firstly, we installed the apache HTTP server and pulled the web application from the github, and test if the web application is functional by clicking the url of the virtual machine. Secondly, we installed the APIs and follow the installation instruction generated from Andreas and Shun who are responsible for the API development. Finally, after the directory configuration of both the APIs and the web application, when you click on the url of the virtual machine you should be able to see the video which has been processed by the APIs.
+              Firstly, we installed the apache HTTP server and test if the web application is functional by clicking the url of the virtual machine. Secondly, we installed the environment for the posture recognition that we developed and test if posture recognition functions properly and outputs the processed image or video by using the webapp to check. In other words, we are treating this kind of webapp as the screen of the server.
+              <br>
+              <br>
+              Lastly, we used another Azure service called Azure Storage --Block Blob to store the media files which are classified into two folders: one consisting of lots of images to train the posture recognition's classifiers and the other consisting of sample images and videos to let the Posture Recognition to identify the sitting, standing and laying features. The virtual machine then can use HTTP channel to extract the media files to pass to the Posture Recognition.
               </p>
               <br>
 
