@@ -79,7 +79,7 @@
     <section id="project-background" class="projects-section bg-light">
       <div class="container">
         <div class="col-lg-12 text-center">
-          <h1 class="section-heading text-uppercase">System architecture diagram</h1>
+          <h1 class="section-heading text-uppercase">System architecture diagram </h1>
           <p class="line"></p>
           <p class="text-black-100" style="text-align: justify;" >We have three separate systems to present our prototype:</p>
 
@@ -128,7 +128,7 @@
           <div class="row"> 
             <div class="column">
               <h3 align="left"><u>ZONE TWO</u></h3>
-              <img class="sketch" src="img/image-api.jpg" align="right" style="width:40%;">
+              <img class="sketch" src="img/image-api.JPG" align="right" style="width:40%;">
               <br>
               <p class="text-black-100" style="text-align:justify;">
                   Firstly, we used openpose to analyse the images to extract x and y coordinates of 18 body joints from human. Using tensorflow to extract the data of standing, sitting and laying according to the patterns of 18 body joints. After that, it outputs a dataset which consists of records of the postures (sitting, standing and laying) with 18 body joints.
@@ -141,7 +141,7 @@
                   <br><br>
               </p>
 
-              <h3><u>ZONE ONE</u></h3>
+              <h3 align="right"><u>ZONE ONE (Shun)</u></h3>
               <img class="sketch" src="img/sketches/xxx.png" align="left">
               <p class="text-black-100" style="text-align:justify;">The same procedure of installing and configuring the API will be performed by Shun Shao 
                 who is in charge of face and object recognition. Shun is also using his own machine to install and configure the APIs with the specs.
@@ -163,7 +163,7 @@
 
               <h3 align="left"><u>DASHBOARD</u></h3>
               <img class="sketch" src="img/sketches/xxx.png" align="right">
-              <p class="text-black-100" style="text-align:justify;"></p>
+              <p class="text-black-100" style="text-align:justify;">bla bla bla</p>
 
               <h3 align="right"><u>CLOUD BASED INFRASTRUCTURE</u></h3>
               <img class="sketch" src="img/sketches/xxx.png" align="left">
@@ -173,7 +173,7 @@
               Firstly, we installed the apache HTTP server and test if the web application is functional by clicking the url of the virtual machine. Secondly, we installed the environment for the posture recognition that we developed and test if posture recognition functions properly and outputs the processed image or video by using the webapp to check. In other words, we are treating this kind of webapp as the screen of the server.
               <br>
               <br>
-              Lastly, we used another Azure service called Azure Storage --Block Blob to store the media files which are classified into two folders: one consisting of lots of images to train the posture recognition's classifiers and the other consisting of images and videos to let the Posture Recognition to identify the sitting, standing and laying features.
+              Lastly, we used another Azure service called Azure Storage --Block Blob to store the media files which are classified into two folders: one consisting of lots of images to train the posture recognition's classifiers and the other consisting of images and videos to let the Posture Recognition to identify the sitting, standing and laying features. The virtual machine then can use HTTP to extract the media files to pass to the Posture Recognition.
               </p>
               <br>
 
