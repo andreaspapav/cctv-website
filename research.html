@@ -45,7 +45,16 @@
               <a class="nav-link js-scroll-trigger" href="hci.html">HCI</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="prototype.html">Prototype</a>
+              <a class="nav-link js-scroll-trigger" href="design.html">Design</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="testing.html">Testing</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="evaluation.html">Evaluation</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="management.html">Management</a>
             </li>
           </ul>
         </div>
@@ -152,17 +161,45 @@
         <div class="col-lg-12 text-center">
           <h1 class="section-heading text-uppercase">Related Technologies</h1>
           <p class="line"></p>
+          <br>
+          <h2 class="section-heading text-uppercase"><u>Image Recognition</u></h2>
           <h2 align="left">Openpose</h2>
           <p class="text-black-100" style="text-align: justify;" >It is an open source library which detects human joints in the image, video or live-video. We first used a desktop machine with GTX1050Ti to install and test the API, and we find out that the openpose displays the track of the human joints for all the people displayed in the image or video, and it also outputs the json file consisting of the x and y coordinates of all the human joints. The reason why because we are using such powerful machine is because that the openpose process the image by frame by frame, hence it requires fast rendering graphic processor.</p>
           <br>
           <h2 align="left">Tensorflow</h2>
-          <p class="text-black-100" style="text-align: justify;">Since our project requires the study of human behaviour pattern in image, so we decided to have a research on TensorFlow based on GPU. Again, this requires high performace of GPU. We are thinking this open source library will be one of the essential components to link to our image recognition.</p>
+          <p class="text-black-100" style="text-align: justify;">Since our project requires the study of human behaviour pattern in image, so we decided to have a research on TensorFlow based on GPU. We are thinking this open source library will be one of the essential components to link to our image recognition. In more details, we believe this component can help the machine to point out what postures are shown in the image by feeding the information about in what pattern of x and y coordinates can determine what postures it is.</p>
+          <br>
+          <h2 align="left">Google Vision API</h2>
+          <p class="text-black-100" style="text-align: justify;"></p>
           <br>
           <h2 align="left">MLPclassifier</h2>
           <p class="text-black-100" style="text-align: justify;">It is one of components in one of the python libraries called sklearn. It is a classifier which learns algorithm or functions by training on a dataset. The classifier requires dataset and will generate a PKL file which enables objects to be serialized to files on disk and deserialized back into the program at runtime.</p>
           <br>
           <h2 align="left">AdaBoost</h2>
           <p class="text-black-100" style="text-align: justify;">It is also a classifier,but it is an alternative way to train the machine learning model, and it is used to boost the performance of decision trees on binary classification problems.</p>
+          <br>
+          <h2 align="left">Gradient Boosting Trees</h2>
+          <p class="text-black-100" style="text-align: justify;">It is the third classifier we chose to apply on training posture recognition. In terms of the difference from other classifers, it produces decision trees in order to optimise an arbitrary differentiable loss function.</p>
+          <br>
+          <br>
+          <h2 class="section-heading text-uppercase"><u>Web Integration</u></h2>
+          <br>
+          <p class="text-black-100" style="text-align: center;" >This section is for integrating AzureVM, image recognition and web application together.</p>
+          <br>
+          <h2 align="left">Azure Cloud</h2>
+          <p class="text-black-100" style="text-align: justify;">Since this project involves tons of requirements on image recognition and machine learning, we decided to host an GPU based Linux virtual machine from Azure.</p>
+          <br>
+          <h2 align="left">Apache</h2>
+          <p class="text-black-100" style="text-align: justify;">The files which we used to write image recognition and machine learning will mainly be written in python. Since we do not have requirement on building fasinating and functional web UI, we are thinking to use PHP to show our demonstration on our AI, so that we can save lots of time and contribute more times on developing the CCTV AI. Therefore, Apache will be the web server to run our demonstration website</p>
+          <br>
+          <h2 align="left">Mod_wgi</h2>
+          <p class="text-black-100" style="text-align: justify;">It is an potential apache extension which we are going to use in order to communicate with the python files.</p>
+          <br>
+          <h2 align="left">Django</h2>
+          <p class="text-black-100" style="text-align: justify;">To be continued...</p>
+
+
+
         </div>
       </div>
 
