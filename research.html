@@ -162,14 +162,29 @@
           <h1 class="section-heading text-uppercase">Related Technologies</h1>
           <p class="line"></p>
           <br>
-          <h2 class="section-heading text-uppercase"><u>Image Recognition</u></h2>
+          <p class="text-black-100" style="text-align: justify;" >We separated the technology research areas into four parts, and the first three elements are for the Image Recognition and the last elements are for the integration and deployment:
+            <br>
+            <br>
+            - Posture Recognition
+            <br>
+            - Face Recognition
+            <br>
+            - Item Recognition
+            <br>
+            - System Integration
+          </p>
+          <br>
+          <h2 class="section-heading text-uppercase"><u>Posture Recognition</u></h2>
           <h2 align="left">Openpose</h2>
-          <p class="text-black-100" style="text-align: justify;" >It is an open source library which detects human joints in the image, video or live-video. We first used a desktop machine with GTX1050Ti to install and test the API, and we find out that the openpose displays the track of the human joints for all the people displayed in the image or video, and it also outputs the json file consisting of the x and y coordinates of all the human joints. The reason why because we are using such powerful machine is because that the openpose process the image by frame by frame, hence it requires fast rendering graphic processor.</p>
+          <p class="text-black-100" style="text-align: justify;" >It is an open source library which detects human joints in the image, video or live-video. We first used a desktop machine with GTX1050Ti to install and test the API, and we find out that the openpose displays the track of the human joints for all the people displayed in the image or video, and it also outputs the json file consisting of the x and y coordinates of all the human joints.
+            <br>
+            <br>
+          We can use the x and y body coordinates to generate the posture patterns of 'sitting', 'standing' and 'laying' with tensorflow, then we put it into a dataset in csv.</p>
           <br>
           <h2 align="left">Tensorflow</h2>
           <p class="text-black-100" style="text-align: justify;">Since our project requires the study of human behaviour pattern in image, so we decided to have a research on TensorFlow based on GPU. We are thinking this open source library will be one of the essential components to link to our image recognition. In more details, we believe this component can help the machine to point out what postures are shown in the image by feeding the information about in what pattern of x and y coordinates can determine what postures it is.</p>
           <br>
-          <h2 align="left">Google Vision API</h2>
+          <h2 align="left">Anaconda</h2>
           <p class="text-black-100" style="text-align: justify;"></p>
           <br>
           <h2 align="left">MLPclassifier</h2>
@@ -182,21 +197,25 @@
           <p class="text-black-100" style="text-align: justify;">It is the third classifier we chose to apply on training posture recognition. In terms of the difference from other classifers, it produces decision trees in order to optimise an arbitrary differentiable loss function.</p>
           <br>
           <br>
-          <h2 class="section-heading text-uppercase"><u>Web Integration</u></h2>
+          <h2 class="section-heading text-uppercase"><u>Face Recognition</u></h2>
+          <br>
+          <h2 class="section-heading text-uppercase"><u>Item Recognition</u></h2>
+          <br>
+          <h2 class="section-heading text-uppercase"><u>System Integration</u></h2>
           <br>
           <p class="text-black-100" style="text-align: center;" >This section is for integrating AzureVM, image recognition and web application together.</p>
           <br>
           <h2 align="left">Azure Cloud</h2>
-          <p class="text-black-100" style="text-align: justify;">Since this project involves tons of requirements on image recognition and machine learning, we decided to host an GPU based Linux virtual machine from Azure.</p>
+          <p class="text-black-100" style="text-align: justify;">Since this project involves tons of requirements on image recognition and machine learning, we decided to host an GPU based Linux virtual machine from Azure. In addition, after the integration, we can use it for deployment as well since it got an IPv4 address for accessing the web application.</p>
           <br>
           <h2 align="left">Apache</h2>
-          <p class="text-black-100" style="text-align: justify;">The files which we used to write image recognition and machine learning will mainly be written in python. Since we do not have requirement on building fasinating and functional web UI, we are thinking to use PHP to show our demonstration on our AI, so that we can save lots of time and contribute more times on developing the CCTV AI. Therefore, Apache will be the web server to run our demonstration website</p>
+          <p class="text-black-100" style="text-align: justify;">The files which we used to write image recognition and machine learning will mainly be written in python. Since we do not have requirement on building fasinating and functional web UI and the application requires extensive communication with the Linux server, we are thinking to use PHP to show our demonstration on our AI.</p>
           <br>
           <h2 align="left">Mod_wgi</h2>
           <p class="text-black-100" style="text-align: justify;">It is an potential apache extension which we are going to use in order to communicate with the python files.</p>
           <br>
           <h2 align="left">Django</h2>
-          <p class="text-black-100" style="text-align: justify;">To be continued...</p>
+          <p class="text-black-100" style="text-align: justify;">Since most files we implemented for the image recognition are in python, we are also thinking using Django would be a good solution to execute the image recognition from the webserver</p>
 
 
 
@@ -205,13 +224,55 @@
 
     </section>
     
+
+    <section id="requirements-gathering" class="projects-section bg-light">
+      <div class="container">
+        <div class="col-lg-12 text-center">
+          <h1 class="section-heading text-uppercase">Comparison</h1>
+          <p class="line"></p>
+          <br>
+          <p class="text-black-100" style="text-align: center;" >This section will be comparing different technologies in different parts mentioned above.</p>
+          <br>
+          <br>
+          <h2 class="section-heading text-uppercase"><u>Posture Recognition</u></h2>
+          <h2 align="left">Classifiers</h2>
+          <p class="text-black-100" style="text-align: justify;">As I mentioned above, three classifiers have their own algorithm to create the model. After a few experiment, we found that each of the classifiers might be accurate in different patterns of datasets. Therefore, when we are creating the model for the posture recognition, we will generate three different models from three classifiers, and then we will compare which model is more accurate by inputing sample images displaying 'sitting', 'standing' and 'laying'.</p>
+          <br>
+          <h2 class="section-heading text-uppercase"><u>Face Recognition</u></h2>
+          <h2 class="section-heading text-uppercase"><u>Item Recognition</u></h2>
+          <h2 class="section-heading text-uppercase"><u>System Integration</u></h2>
+          <h2 align="left">Ubuntu Server</h2>
+          <p class="text-black-100" style="text-align: justify;">To be continued ...</p>
+          <br>
+          <h2 align="left">Apache & Django</h2>
+          <p class="text-black-100" style="text-align: justify;">Both are webservers, one is mainly for PHP and the other is for python. However, here are the aspects that we have to consider in order to choose which webserver that we are going to use for system integration:</p>
+          <br>
+            <ul class="text-black-100" style="text-align: justify;">
+              <li>Most image recognition files are in python</li>
+              <li>Image webcam screenshot functionality attached to the web application will be in JS</li>
+              <li>Application requires communication with Linux server</li>
+              <li>Displaying the livefeed video functionality attached to the web application requires Django</li>
+            </ul>
+          <br>
+          <p class="text-black-100" style="text-align: justify;">From situation 1, both webserver can execute python file. Apache can use PHP to run "shell_exec()" function to perform the linux shell command to execute the python file with anaconda environment</p>
+        </div>
+      </div>
+
+    </section>
+
+
+
+
     <!-- Summary of final Section -->
     <section id="requirements-gathering" class="projects-section bg-light">
       <div class="container">
         <div class="col-lg-12 text-center">
           <h1 class="section-heading text-uppercase">Summary of final decision</h1>
           <p class="line"></p>
-          <p class="text-black-100" style="text-align: justify;" > We decided to split the image recognition part into four different types of recognitions, which are facial, posture, item and tracking recognition. For posture recognition, we decided to use the combination of Tensorflow and Openpose to extract the data of specific posture in the image. And then, applying two different classifiers which are AdaBoost and MLPclassifier to train the model, but it is our choice to use one of the classifiers to see which one has a better machine learning model. </p>
+          <p class="text-black-100" style="text-align: justify;" > We decided to split the image recognition part into four different types of recognitions, which are facial, posture, item and tracking recognition. For posture recognition, we decided to use the combination of Tensorflow and Openpose to extract the data of specific posture in the image. And then, applying two different classifiers which are AdaBoost and MLPclassifier to train the model, but it is our choice to use one of the classifiers to see which one has a better machine learning model. 
+            <br>
+            <br>
+          so that we can save lots of time and contribute more times on developing the CCTV AI. Therefore, Apache will be the web server to run our demonstration website because PHP can communicate with the Linux server easily in order to configure the internal configuration for executing the python files.</p>
         </div>
       </div>
 
@@ -225,15 +286,15 @@
           <p class="line"></p>
           <p class="text-black-100" style="text-align: justify;" >
             <ul>
-              <li align="left" ><h4>Amazon Rekognition: </h4><a href="https://aws.amazon.com/rekognition/">https://aws.amazon.com/rekognition/</li>
+              <li align="left" ><h4>Amazon Rekognition: </h4><a href="https://aws.amazon.com/rekognition/">https://aws.amazon.com/rekognition</a></li>
               <br>
               <li align="left" ><h4>Openpose: </h4><a href="https://github.com/CMU-Perceptual-Computing-Lab/openpose">https://github.com/CMU-Perceptual-Computing-Lab/openpose</a></li>
               <br>
-              <li align="left" ><h4>TensorFlow: </h4><a href="https://www.tensorflow.org/guide/using_gpu">https://www.tensorflow.org/guide/using_gpu</li>
+              <li align="left" ><h4>TensorFlow: </h4><a href="https://www.tensorflow.org/guide/using_gpu">https://www.tensorflow.org/guide/using_gpu</a></li>
               <br>
-              <li align="left" ><h4>MLPclassifier: </h4><a href="https://scikit-learn.org/stable/modules/neural_networks_supervised.html">https://scikit-learn.org/stable/modules/neural_networks_supervised.html</li>
+              <li align="left" ><h4>MLPclassifier: </h4><a href="https://scikit-learn.org/stable/modules/neural_networks_supervised.html">https://scikit-learn.org/stable/modules/neural_networks_supervised.html</a></li>
               <br>
-              <li align="left" ><h4>AdaBoost: </h4><a href="https://machinelearningmastery.com/boosting-and-adaboost-for-machine-learning/">https://machinelearningmastery.com/boosting-and-adaboost-for-machine-learning/</li>
+              <li align="left" ><h4>AdaBoost: </h4><a href="https://machinelearningmastery.com/boosting-and-adaboost-for-machine-learning/">https://machinelearningmastery.com/boosting-and-adaboost-for-machine-learning/</a></li>
             </ul>
           </p>
         </div>
