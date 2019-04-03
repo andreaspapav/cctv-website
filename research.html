@@ -185,7 +185,7 @@
           <p class="text-black-100" style="text-align: justify;">Since our project requires the study of human behaviour pattern in image, so we decided to have a research on TensorFlow based on GPU. We are thinking this open source library will be one of the essential components to link to our image recognition. In more details, we believe this component can help the machine to point out what postures are shown in the image by feeding the information about in what pattern of x and y coordinates can determine what postures it is.</p>
           <br>
           <h2 align="left">Anaconda</h2>
-          <p class="text-black-100" style="text-align: justify;"></p>
+          <p class="text-black-100" style="text-align: justify;">This is for creating custom python environment to do the version control. At the start, we are thinking to create three different python environment for posture, item and face recognition to avoid library version collision.</p>
           <br>
           <h2 align="left">MLPclassifier</h2>
           <p class="text-black-100" style="text-align: justify;">It is one of components in one of the python libraries called sklearn. It is a classifier which learns algorithm or functions by training on a dataset. The classifier requires dataset and will generate a PKL file which enables objects to be serialized to files on disk and deserialized back into the program at runtime.</p>
@@ -220,7 +220,7 @@
           <h2 align="left">Django</h2>
           <p class="text-black-100" style="text-align: justify;">Since most files we implemented for the image recognition are in python, we are also thinking using Django would be a good solution to execute the image recognition from the webserver</p>
           <br>
-          <h2 align="left">navigator.mediaDevices JS library</h2>
+          <h2 align="left">Navigator.mediaDevices JS library</h2>
           <p class="text-black-100" style="text-align: justify;">This is one of the ways to access the webcam from the web application throught JS</p>
 
 
@@ -258,6 +258,12 @@
             </ul>
           <br>
           <p class="text-black-100" style="text-align: justify;">From situation 1, both webserver can execute python file. Apache can use PHP to run "shell_exec()" function to perform the linux shell command to execute the python file with anaconda environment</p>
+          <br>
+          <p class="text-black-100" style="text-align: justify;">From situation 2, we can see that PHP has more advantages than using Django because of the library written in JS. Since PHP is like a senior version of HTML, Apache is more compatible.</p>
+          <br>
+          <p class="text-black-100" style="text-align: justify;">From situation 3, the web application allows users to use the image recognition to analyse the image, webcam image, video and live video uploaded. Therefore, the easiest setup for this experiment, is having executable shell command to be integrated into the web application for the www-data user. Therefore, again Apache has more advantages on this.</p>
+          <br>
+          <p class="text-black-100" style="text-align: justify;">From situation 4, To be continued...</p>
         </div>
       </div>
 
@@ -272,10 +278,10 @@
         <div class="col-lg-12 text-center">
           <h1 class="section-heading text-uppercase">Summary of final decision</h1>
           <p class="line"></p>
-          <p class="text-black-100" style="text-align: justify;" > We decided to split the image recognition part into four different types of recognitions, which are facial, posture, item and tracking recognition. For posture recognition, we decided to use the combination of Tensorflow and Openpose to extract the data of specific posture in the image. And then, applying two different classifiers which are AdaBoost and MLPclassifier to train the model, but it is our choice to use one of the classifiers to see which one has a better machine learning model. 
+          <p class="text-black-100" style="text-align: justify;" > In terms of the image recognition, as you can see that we have already separated into three different parts: posture, item and face recognition. This is because there is no image recognition as a whole package nowadays. We can use posture to identify whether the people is sitting, standing or laying, item to recognise the things surrounding us and face to recognise who this person is. Different recognitions will be implemented by different methods of machine learning and recognition. For the posture recognition, I will be using 3 different classifiers mentioned above in order to compare the accuracy between them and select the best from them. 
             <br>
             <br>
-          so that we can save lots of time and contribute more times on developing the CCTV AI. Therefore, Apache will be the web server to run our demonstration website because PHP can communicate with the Linux server easily in order to configure the internal configuration for executing the python files.</p>
+          Since Camden Council monitoring centre has their own UI and the main purpose is to develop the CCTV AI, we decided to use Apache as our main webserver, so that we can save lots of time and contribute more times on developing the CCTV AI. In addition, PHP can communicate with the Linux server easily in order to configure the internal configuration for executing the python files and analysed the different inputs uploaded by the users. The web application will just be used for demonstrating how far we have developed our CCTV AI.</p>
         </div>
       </div>
 
