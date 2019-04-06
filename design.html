@@ -107,7 +107,24 @@
               <div class="col-lg-12 text-center">
                 <h1 class="section-heading text-uppercase">System Architecture</h1>
                 <p class="line"></p>
+                <p class="text-black-100" style="text-align: justify;" ><b>- Azure Cloud:</b></p>
+                <p class="text-black-100" style="text-align: justify;" >It is the platform which provides virtual machine allowing us to deploy our application and route the website to the world.</p>
+                <br>
+                <p class="text-black-100" style="text-align: justify;" ><b>- Linux Virtual Machine:</b></p>
+                <p class="text-black-100" style="text-align: justify;" >This is the machine we rent from Azure, which allows us to have a powerful GPU to run our image recogitions and route the website to the world by opening port 80</p>
+                <br>
+                <p class="text-black-100" style="text-align: justify;" ><b>- Posture Recognition</b></p>
+                <p class="text-black-100" style="text-align: justify;" >It uses openpose and tensorflow to perform the posture and human detection in a frame and machine learning of recognising standing, sitting and laying.</p>
+                <br>
+                <p class="text-black-100" style="text-align: justify;" ><b>- Face Recognition</b></p>
                 <p class="text-black-100" style="text-align: justify;" >Description</p>
+                <br>
+                <p class="text-black-100" style="text-align: justify;" ><b>- Item Recognition</b></p>
+                <p class="text-black-100" style="text-align: justify;" >Description</p>
+                <br>
+                <p class="text-black-100" style="text-align: justify;" ><b>- Apache</b></p>
+                <p class="text-black-100" style="text-align: justify;" >This is the webserver which mainly runs PHP, and our web application is mainly written in PHP. In addition, it has a high compatibility to access the Linux server and modify the filesystem in order to execute the image recognition.</p>
+                
               </div>
             </div>
           </section>
@@ -150,7 +167,36 @@
               <div class="col-lg-12 text-center">
                 <h1 class="section-heading text-uppercase">Implementation of Key functionalities</h1>
                 <p class="line"></p>
-                <p class="text-black-100" style="text-align: justify;" >Description</p>
+                <h2 class="section-heading text-uppercase"><u>Posture Recognition</u></h2>
+                <br>
+                <p class="text-black-100" style="text-align: justify;" >This API consists of the followings:</p>
+                  <ul class="text-black-100" style="text-align: justify;">
+                    <li>OpenPose</li>
+                    <li>TensorFlow</li>
+                    <li>Tf-pose-estimation</li>
+                    <li>Scikit-learn</li>
+                    <li>MLP Classifier</li>
+                    <li>AdaBoost Classifier</li>
+                    <li>Gradient Boosting Trees</li>
+                  </ul>
+
+
+                <div class="row">
+                  <div class="column">
+                    <img class="sketch" src="img/design/ModelTraining.png" align="right" style="width: 100%;">
+                  </div>
+                  <div class="column">
+                    <p class="text-black-100" style="text-align: justify;" >This API allows the users to train the machine to perform posture recognition by the users. As you can see from the right, the process consists of three parts: gathering samples, generating datasets and producing models via the classifiers.
+                      <br>
+                      <br>
+                    Firstly, We gathered more than 15 images displaying sitting, standing and laying of a human separately. The reason why we need more than 15 images is because of the classifers that we are going to use after generating the datasets require more than 15 samples in order to perform machine learning. In details, We gathered the photos regarding three human actions mentioned from the opensource photos website and taking pictures of us. After that, we have to rename the photos file into ex. sitting1.jpg, sitting2.jpg, standing1.jpg and laying1.jpg.
+                    </p>
+                  </div>
+                </div>
+                <br>
+
+                <p class="text-black-100" style="text-align: justify;" >Secondly</p>
+                
               </div>
             </div>
           </section>
