@@ -171,10 +171,15 @@
             <br>
             - Item Recognition
             <br>
-            - System Integration
+            - System Integration(Azure)
+            <br>
+            - System Integration(Local)
           </p>
           <br>
           <h2 class="section-heading text-uppercase"><u>Posture Recognition</u></h2>
+          <br>
+          <h2 align="left"><u>Techniques</u></h2>
+          <br>
           <h2 align="left">OpenCV</h2>
           <p class="text-black-100" style="text-align: justify;" >It is an opensource library consists of vision and machine learning. It has lots of algorithms to perform classifying human actions, recognising faces and identifying items in videos in real-time.</p>
           <br>
@@ -197,7 +202,7 @@
           <p class="text-black-100" style="text-align: justify;">This is a python library which allows us to perform machine learning. We are interested in the part about classification and model selection. Therefore, we are thinking if it can help us generate a model to classify the human actions.</p>
           <br>
           <h2 align="left">MLPclassifier</h2>
-          <p class="text-black-100" style="text-align: justify;">It is one of components in one of the python libraries called sklearn. It is a classifier which learns algorithm or functions by training on a dataset. The classifier requires dataset and will generate a PKL file which enables objects to be serialized to files on disk and deserialized back into the program at runtime.</p>
+          <p class="text-black-100" style="text-align: justify;">It stands for Multilayer Perceptron Classifier. It is one of components in one of the python libraries called sklearn. It is a classifier which learns algorithm or functions by training on a dataset. The classifier requires dataset and will generate a PKL file which enables objects to be serialized to files on disk and deserialized back into the program at runtime.</p>
           <br>
           <h2 align="left">AdaBoost</h2>
           <p class="text-black-100" style="text-align: justify;">It is also a classifier,but it is an alternative way to train the machine learning model, and it is used to boost the performance of decision trees on binary classification problems.</p>
@@ -206,13 +211,32 @@
           <p class="text-black-100" style="text-align: justify;">It is the third classifier we chose to apply on training posture recognition. In terms of the difference from other classifers, it produces decision trees in order to optimise an arbitrary differentiable loss function.</p>
           <br>
           <br>
+          <h2 align="left"><u>Comparison</u></h2>
+          <br>
+          <h2 align="left">MLP vs Adaboost vs Gradient classifiers</h2>
+          <p class="text-black-100" style="text-align: justify;">As I mentioned above, three classifiers have their own algorithm to create the model. After a few experiment, we found that each of the classifiers might be accurate in different patterns of datasets. Therefore, when we are creating the model for the posture recognition, we will generate three different models from three classifiers, and then we will compare which model is more accurate by inputing sample images displaying 'sitting', 'standing' and 'laying'.</p>
+          <br>
+
+
+
+
           <h2 class="section-heading text-uppercase"><u>Face Recognition</u></h2>
           <br>
+
+
+
+
           <h2 class="section-heading text-uppercase"><u>Item Recognition</u></h2>
           <br>
-          <h2 class="section-heading text-uppercase"><u>System Integration</u></h2>
+
+
+
+
+          <h2 class="section-heading text-uppercase"><u>System Integration(Azure)</u></h2>
           <br>
-          <p class="text-black-100" style="text-align: center;" >This section is for integrating AzureVM, image recognition and web application together.</p>
+          <p class="text-black-100" style="text-align: center;" >This section is for integrating web application, image and video analysis into AzureVM</p>
+          <br>
+          <h2 align="left"><u>Techniques</u></h2>
           <br>
           <h2 align="left">Azure Cloud</h2>
           <p class="text-black-100" style="text-align: justify;">Since this project involves tons of requirements on image recognition and machine learning, we decided to host an GPU based Linux virtual machine from Azure. In addition, after the integration, we can use it for deployment as well since it got an IPv4 address for accessing the web application.</p>
@@ -231,39 +255,17 @@
           <br>
           <h2 align="left">Navigator.mediaDevices JS library</h2>
           <p class="text-black-100" style="text-align: justify;">This is one of the ways to access the webcam from the web application throught JS</p>
-
-
-
-        </div>
-      </div>
-
-    </section>
-    
-
-    <section id="requirements-gathering" class="projects-section bg-light">
-      <div class="container">
-        <div class="col-lg-12 text-center">
-          <h1 class="section-heading text-uppercase">Comparison</h1>
-          <p class="line"></p>
-          <br>
-          <p class="text-black-100" style="text-align: center;" >This section will be comparing different technologies in different parts mentioned above.</p>
           <br>
           <br>
-          <h2 class="section-heading text-uppercase"><u>Posture Recognition</u></h2>
-          <h2 align="left">Classifiers</h2>
-          <p class="text-black-100" style="text-align: justify;">As I mentioned above, three classifiers have their own algorithm to create the model. After a few experiment, we found that each of the classifiers might be accurate in different patterns of datasets. Therefore, when we are creating the model for the posture recognition, we will generate three different models from three classifiers, and then we will compare which model is more accurate by inputing sample images displaying 'sitting', 'standing' and 'laying'.</p>
+          <h2 align="left"><u>Comparison</u></h2>
           <br>
-          <h2 class="section-heading text-uppercase"><u>Face Recognition</u></h2>
-          <h2 class="section-heading text-uppercase"><u>Item Recognition</u></h2>
-          <h2 class="section-heading text-uppercase"><u>System Integration</u></h2>
-          <h2 align="left">Apache & Django</h2>
+          <h2 align="left">Apache vs Django</h2>
           <p class="text-black-100" style="text-align: justify;">Both are webservers, one is mainly for PHP and the other is for python. However, here are the aspects that we have to consider in order to choose which webserver that we are going to use for system integration:</p>
           <br>
             <ul class="text-black-100" style="text-align: justify;">
               <li>Most image recognition files are in python</li>
               <li>Image webcam screenshot functionality attached to the web application will be in JS</li>
               <li>Application requires communication with Linux server</li>
-              <li>Displaying the livefeed video functionality attached to the web application requires Django</li>
             </ul>
           <br>
           <p class="text-black-100" style="text-align: justify;">From situation 1, both webserver can execute python file. Apache can use PHP to run "shell_exec()" function to perform the linux shell command to execute the python file with anaconda environment</p>
@@ -272,12 +274,19 @@
           <br>
           <p class="text-black-100" style="text-align: justify;">From situation 3, the web application allows users to use the image recognition to analyse the image, webcam image, video and live video uploaded. Therefore, the easiest setup for this experiment, is having executable shell command to be integrated into the web application for the www-data user. Therefore, again Apache has more advantages on this.</p>
           <br>
-          <p class="text-black-100" style="text-align: justify;">From situation 4, To be continued...</p>
+
+
+
+
+
+          <h2 class="section-heading text-uppercase"><u>System Integration(Local)</u></h2>
+
+
+
         </div>
       </div>
 
     </section>
-
 
 
 
