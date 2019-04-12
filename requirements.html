@@ -20,6 +20,7 @@
 
     <!-- Custom styles for this template -->
     <link href="css/grayscale.min.css" rel="stylesheet">
+    <link href="css/custom.css" rel="stylesheet">
 
   </head>
 
@@ -85,14 +86,51 @@
             <br>The council was created by the London Government Act 1963 and replaced three local authorities: Hampstead Metropolitan Borough Council, Holborn Metropolitan Borough Council and St Pancras Metropolitan Borough Council.
 
             </p>
-            
+
           </div>
         </div>
       </div>
     </section>
-    
+
+    <div class="container-fluid bg-light">
+      <div class="row">
+
+    <!--Sidebar menu-->
+    <div class="col-sm-2">
+      <br>
+      <br>
+      <div id="sidebar" class="sidebar">
+       <nav class="navbar navbar-shrink">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#project_background">Background</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#project_goal">Project Goals</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#requirement_gathering">Requirement Gathering</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#personas">Personas</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#storyboards">Storyboards</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#moscow">MoSCoW Requirement List</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#use_cases">Use Case</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+
+    <div class="col-sm-10">
     <!-- Background Section -->
-    <section id="project-background" class="projects-section bg-light">
+    <section id="project_background" class="projects-section bg-light">
       <div class="container">
         <div class="col-lg-12 text-center">
           <h1 class="section-heading text-uppercase">Background</h1>
@@ -103,7 +141,7 @@
     </section>
 
       <!-- Project Goals Section -->
-    <section id="project-goals" class="projects-section bg-light">
+    <section id="project_goal" class="projects-section bg-light">
       <div class="container">
         <div class="col-lg-12 text-center">
           <h1 class="section-heading text-uppercase">Project Goals</h1>
@@ -113,9 +151,9 @@
       </div>
 
     </section>
-    
+
     <!-- Requirement Gathering Section -->
-    <section id="requirements-gathering" class="projects-section bg-light">
+    <section id="requirement_gathering" class="projects-section bg-light">
       <div class="container">
         <div class="col-lg-12 text-center">
           <h1 class="section-heading text-uppercase">Requirement Gathering</h1>
@@ -145,7 +183,7 @@
         </div>
         </div>
         </div>
-      </div>
+
 
     </section>
 
@@ -167,13 +205,13 @@
     </section>
 
     <!-- MoSCoW Section -->
-    <section id="MoSCoW-requirements" class="projects-section bg-light">
+    <section id="moscow" class="projects-section bg-light">
       <div class="container">
         <div class="col-lg-12 text-center">
           <h1 class="section-heading text-uppercase">MoSCoW Requirement List</h1>
           <p class="line"></p>
           <p class="text-black-100" style="text-align: justify;" >After the completion of our requirement gathering technique we separated each requirement based on its priority and stored them in the MoSCow requirement list defining them as functional and non-functional tasks.</p>
-          
+
           <!-- MoSCoW Table -->
           <table>
           	<tr>
@@ -209,7 +247,7 @@
   			<tr>
     			<td>4</td>
     			<td><span style="font-weight: bold;">Notifications;</span>
-					<br>- Notify the staff monitoring the CCTVs when a suspicious behaviour is spotted, 
+					<br>- Notify the staff monitoring the CCTVs when a suspicious behaviour is spotted,
 					include camera number and name in order to make it easier for them.
 				</td>
     			<td>Functional</td>
@@ -231,7 +269,7 @@
   			<tr>
     			<td>6</td>
     			<td><span style="font-weight: bold;">Face Recognition;</span>
-					<br>-	Implement face recognition feature in order to make our system more sophisticated, 
+					<br>-	Implement face recognition feature in order to make our system more sophisticated,
 					also allow future use of tracking down wanted criminals based on the police database.
 				</td>
     			<td>Functional</td>
@@ -242,8 +280,8 @@
   			<tr>
     			<td>7</td>
     			<td><span style="font-weight: bold;">User Interface;</span>
-					<br>- There is no need for a User Interface to be created since the client is happy with their current monitoring software. 
-					Instead a single home page will be created simply to show the notifications from the system we built. 
+					<br>- There is no need for a User Interface to be created since the client is happy with their current monitoring software.
+					Instead a single home page will be created simply to show the notifications from the system we built.
 				</td>
     			<td>Functional</td>
   			</tr>
@@ -254,23 +292,23 @@
     </section>
 
     <!-- User Case Section -->
-    <section id="usecases" class="projects-section bg-light">
+    <section id="use_cases" class="projects-section bg-light">
       <div class="container">
         <div class="col-lg-12 text-center">
           <h1 class="section-heading text-uppercase">Use Case</h1>
           <p class="line"></p>
-          <p class="text-black-100" style="text-align: justify;" > Based on the information we gathered, we started creating use cases in order to show how the system will interact with one another. 
+          <p class="text-black-100" style="text-align: justify;" > Based on the information we gathered, we started creating use cases in order to show how the system will interact with one another.
             A list of all the use cases with their description follows along with the overall use case diagram.</p>
           <h2 class="section-heading text-uppercase"><u>Use Case Diagram</u></h2>
           <p class="text-black-100" style="text-align: justify;">The diagram that follows shows the functionalities of our developed software and how they interact with each other.</p>
           <img src="img/usecaseDiagram.png" style="width:60%; padding: 2rem 0rem 2rem 0rem;" align="middle">
-          <p class="text-black-100" style="text-align: justify;">The overall use case diagram shown above demonstrates how the whole system is working. 
-            Due to the type of our project there is no interaction with the user, the whole system is automated. Therefore, 
+          <p class="text-black-100" style="text-align: justify;">The overall use case diagram shown above demonstrates how the whole system is working.
+            Due to the type of our project there is no interaction with the user, the whole system is automated. Therefore,
             we display the tasks that occur automatically within the system. The only interaction that the user has is the notifications that pop-up in the web app.</p>
           <h2 class="section-heading text-uppercase"><u>List of Use Cases</u></h2>
           <p class="text-black-100" style="text-align: justify;" >From the overall use case diagram we had to take each use case and analyze it further. Description, Preconditions and postconditions for each one
             had to be noted in order for the development to occur flawlessly. A list with all the use cases follows.</p>
-          <div class="row"> 
+          <div class="row">
             <div class="column">
               <img src="img/uc00.JPG" style="width:100%;">
               <img src="img/uc02.JPG" style="width:100%;">
@@ -288,6 +326,10 @@
 
     </section>
 
+  </div>
+</div>
+
+
     <!-- Footer -->
     <footer class="bg-black small text-center text-white-50">
       <div class="container">
@@ -304,6 +346,7 @@
 
     <!-- Custom scripts for this template -->
     <script src="js/grayscale.min.js"></script>
+    <script src="js/sidebar.js"></script>
 
   </body>
 
