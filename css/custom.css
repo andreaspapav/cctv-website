@@ -1,5 +1,15 @@
 .sidebar {
 	width: 180px;
 	height: 100%;
-	position: fixed;
+}
+
+/* top margin on sidebar needed for JS to parse */
+.sidebar, .content {  margin-top: 5rem; }
+
+/* fixed sidebar applied dynamtically with JS */
+.fixed {  position: fixed; top: 0; }
+
+#sidebar .navbar-nav li.active > a {
+	color: #3c6360;
+	font-weight: bold;
 }
