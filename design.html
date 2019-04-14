@@ -113,6 +113,9 @@
                 <p class="text-black-100" style="text-align: justify;" ><b>- Linux Virtual Machine:</b></p>
                 <p class="text-black-100" style="text-align: justify;" >This is the machine we rent from Azure, which allows us to have a powerful GPU to run our image recogitions and route the website to the world by opening port 80</p>
                 <br>
+                <p class="text-black-100" style="text-align: justify;" ><b>- Image Recognition</b></p>
+                <p class="text-black-100" style="text-align: justify;" >This is a package including the posture, item and face recognition.</p>
+                <br>
                 <p class="text-black-100" style="text-align: justify;" ><b>- Posture Recognition</b></p>
                 <p class="text-black-100" style="text-align: justify;" >It uses openpose and tensorflow to perform the posture and human detection in a frame and machine learning of recognising standing, sitting and laying.</p>
                 <br>
@@ -124,6 +127,12 @@
                 <br>
                 <p class="text-black-100" style="text-align: justify;" ><b>- Apache</b></p>
                 <p class="text-black-100" style="text-align: justify;" >This is the webserver which mainly runs PHP, and our web application is mainly written in PHP. In addition, it has a high compatibility to access the Linux server and modify the filesystem in order to execute the image recognition.</p>
+                <br>
+                <p class="text-black-100" style="text-align: justify;" ><b>- Object Storage Directory</b></p>
+                <p class="text-black-100" style="text-align: justify;" >This is the directory in the Linux Filesystem, and it stores the input of images and videos from the user and the output of log files and videos from the image recognition.</p>
+                <br>
+                <p class="text-black-100" style="text-align: justify;" ><b>- User</b></p>
+                <p class="text-black-100" style="text-align: justify;" >The user can upload their images, snapshot from webcam and video to the webapp and analyse the inputs through the image recognition.</p>
 
               </div>
             </div>
@@ -212,6 +221,18 @@
                     <img class="sketch" src="img/design/PostureProcess.png" align="right" style="width: 100%;">
                   </div>
                 </div>
+                <br>
+                <br>
+                <h2 class="section-heading text-uppercase"><u>Webcam Snapshot</u></h2>
+                <br>
+                <p class="text-black-100" style="text-align: justify;" >This is a functionality from the webapp in Azure, and it is separated into two parts: webcam display and snapshot.
+                  <br>
+                  <br>
+                Navigator.mediaDevices is a JS library which allows the webapp to get permission from the end user in order to display the webcam of the end user. Due to the issues from the security and the web browser, the end user can use Firefox to display the webcam from local and online webserver, however, Google Chrome can only achieve it through local webserver.
+                  <br>
+                  <br>
+                The webapp takes the snapshot of the webcam by drawing the canvas of the video tag of the webcam component. Once the canvas is drawn, then it saves and encode the canvas data as jpg, and send the data to a php file through JQuery. Finally, the php file will then decode the data and save it into the Linux FileSystem directory pointed.
+                </p>
 
               </div>
             </div>
