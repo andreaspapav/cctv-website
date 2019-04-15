@@ -211,7 +211,7 @@
           <h2 align="left"><u>Techniques</u></h2>
           <br>
           <h2 align="left">OpenCV</h2>
-          <p class="text-black-100" style="text-align: justify;" >It is an opensource library consists of vision and machine learning. It has lots of algorithms to perform classifying human actions, recognising faces and identifying items in videos in real-time.</p>
+          <p class="text-black-100" style="text-align: justify;" >It is an opensource library consists of vision and machine learning. It has lots of algorithms to perform classifying human actions, recognising faces and identifying items in videos in real-time. The reason why we are using this is because it combines the vision library and machine learning together, and it will be very useful when we are classifying the posture indicated from human actions.</p>
           <br>
           <h2 align="left">Openpose</h2>
           <p class="text-black-100" style="text-align: justify;" >It is an open source library which detects human joints in the image, video or live-video. We first used a desktop machine with GTX1050Ti to install and test the API, and we find out that the openpose displays the track of the human joints for all the people displayed in the image or video, and it also outputs the json file consisting of the x and y coordinates of all the human joints.
@@ -223,7 +223,7 @@
           <p class="text-black-100" style="text-align: justify;">Since our project requires the study of human behaviour pattern in image, so we decided to have a research on TensorFlow based on GPU. We are thinking this open source library will be one of the essential components to link to our image recognition. In more details, we believe this component can help the machine to point out what postures are shown in the image by feeding the information about in what pattern of x and y coordinates can determine what postures it is.</p>
           <br>
           <h2 align="left">Tf-pose-estimation</h2>
-          <p class="text-black-100" style="text-align: justify;">This is a github repositroy developed by IIdoo Kim. 'Openpose' for human pose estimation have been implemented using TensorFlow.</p>
+          <p class="text-black-100" style="text-align: justify;">This is a github repositroy developed by IIdoo Kim. 'Openpose' for human pose estimation have been implemented using TensorFlow. We decided to use this library because it combines tensorflow and openpose together to allow us to run them with the input of image, video and webcam. We are thinking to alter the code and to put the model that we trained into it, so that the whole program will use our model to detect what posture is showing rather than using the model graph from opensource library.</p>
           <br>
           <h2 align="left">Anaconda</h2>
           <p class="text-black-100" style="text-align: justify;">This is for creating custom python environment to do the version control. At the start, we are thinking to create three different python environment for posture, item and face recognition to avoid library version collision.</p>
@@ -284,7 +284,7 @@
           <p class="text-black-100" style="text-align: justify;">Since most files we implemented for the image recognition are in python, we are also thinking using Django would be a good solution to execute the image recognition from the webserver</p>
           <br>
           <h2 align="left">Navigator.mediaDevices JS library</h2>
-          <p class="text-black-100" style="text-align: justify;">This is one of the ways to access the webcam from the web application throught JS</p>
+          <p class="text-black-100" style="text-align: justify;">This is one of the ways to access the webcam from the web application throught JS, and we are thinking to use it to put the webcam snapshot and live-video into the webserver, so that we can use it as an input to process the image recognition.</p>
           <br>
           <br>
           <h2 align="left"><u>Comparison</u></h2>
@@ -352,6 +352,16 @@
               <li align="left" ><h4>MLPclassifier: </h4><a href="https://scikit-learn.org/stable/modules/neural_networks_supervised.html">https://scikit-learn.org/stable/modules/neural_networks_supervised.html</a></li>
               <br>
               <li align="left" ><h4>AdaBoost: </h4><a href="https://machinelearningmastery.com/boosting-and-adaboost-for-machine-learning/">https://machinelearningmastery.com/boosting-and-adaboost-for-machine-learning/</a></li>
+              <br>
+              <li align="left" ><h4>Gradient Boosting Tree: </h4><a href="https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.GradientBoostingClassifier.html">https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.GradientBoostingClassifier.html</a></li>
+              <br>
+              <li align="left" ><h4>Tf-pose-estimation: </h4><a href="https://github.com/ildoonet/tf-pose-estimation">https://github.com/ildoonet/tf-pose-estimation</a></li>
+              <br>
+              <li align="left" ><h4>Scikit-learn: </h4><a href="https://scikit-learn.org/stable/">https://scikit-learn.org/stable/</a></li>
+              <br>
+              <li align="left" ><h4>Navigator.mediaDevices: </h4><a href="https://developer.mozilla.org/en-US/docs/Web/API/Navigator/mediaDevices">https://developer.mozilla.org/en-US/docs/Web/API/Navigator/mediaDevices</a></li>
+              <br>
+              <li align="left" ><h4>Mod_wsgi: </h4><a href="https://modwsgi.readthedocs.io/en/develop/">https://modwsgi.readthedocs.io/en/develop/</a></li>
             </ul>
           </p>
         </div>
