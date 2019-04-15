@@ -233,6 +233,22 @@
                   <br>
                 The webapp takes the snapshot of the webcam by drawing the canvas of the video tag of the webcam component. Once the canvas is drawn, then it saves and encode the canvas data as jpg, and send the data to a php file through JQuery. Finally, the php file will then decode the data and save it into the Linux FileSystem directory pointed.
                 </p>
+                <br>
+                <br>
+                <h2 class="section-heading text-uppercase"><u>AzureVM Integration</u></h2>
+                <br>
+                <p class="text-black-100" style="text-align: justify;" >As we mentioned that this functionality is the webapp including image, webcam snapshot and video to be processed by the image recognition. Due to the requirement of the project is simply developing the CCTV AI but implementing any sorts of webapp, we put Apache webserver, the image recognition package and object based files together into the AzureVM for simplicity.
+                  <br>
+                  <br>
+                We used the GPU based virtual machine to host everything, this is because the posture recognition requires high performance on the graphic rendering. In order to process and identify the three types recognitions in each frame in a video quickly, we used K80 GPU to process our application in Azure. On the other hand, we also use it to train our model, however, we have to resize it to a higher performance specs(4 x K80, 224GB RAM) in order to process large quantity of images quickly. Once we trained everything, we lowered the specs of the virtual machine.
+                  <br>
+                  <br>
+                For this particular webapp, we use PHP and JS to implement the front-end, webcam functionality, files upload and connect the Image Recognition. From the System Architecture, the key of how the webapp execute the Image recognition is by using <i>shell_exec()</i>. In addition, this command allows to perform shell command onto the virtual machine, hence we can use it to use the python environment generated from Anaconda to execute the python files from the Image Recognition. For example:
+                  <br>
+                </p>
+                <p class="text-black-100" style="text-align: center;"><i>$posture_output = shell_exec('/var/www/anaconda3/envs/posture/bin/python /var/www/sapient/Posture/featureExtraction/tf-pose-estimation/single_image.py --image=/var/www/file.jpg');</i></p>
+                  <br>
+                <p class="text-black-100" style="text-align: justify;" >As you can see from this code, this is used for execute the Posture Recognition on the image uploaded via Anaconda python environment we generated. And then, we used the same method to execute the combination of Face and Item Recognition. After we gathered all the information generated from the Recognitions, we displayed the data of the variables onto the webapp.</p>
 
               </div>
             </div>
