@@ -213,31 +213,31 @@
           <h2 align="left">OpenCV</h2>
           <p class="text-black-100" style="text-align: justify;" >It is an opensource library consists of vision and machine learning. It has lots of algorithms to perform classifying human actions, recognising faces and identifying items in videos in real-time. The reason why we are using this is because it combines the vision library and machine learning together, and it will be very useful when we are classifying the posture indicated from human actions.</p>
           <br>
-          <h2 align="left">Openpose</h2>
+          <h2 align="left">Openpose <sup style="font-size: 1rem;"><a href="https://github.com/CMU-Perceptual-Computing-Lab/openpose"> [2]</a></sup></h2>
           <p class="text-black-100" style="text-align: justify;" >It is an open source library which detects human joints in the image, video or live-video. We first used a desktop machine with GTX1050Ti to install and test the API, and we find out that the openpose displays the track of the human joints for all the people displayed in the image or video, and it also outputs the json file consisting of the x and y coordinates of all the human joints.
             <br>
             <br>
           We can use the x and y body coordinates to generate the posture patterns of 'sitting', 'standing' and 'laying' with tensorflow, then we put it into a dataset in csv.</p>
           <br>
-          <h2 align="left">Tensorflow</h2>
+          <h2 align="left">Tensorflow<sup style="font-size: 1rem;"><a href="https://www.tensorflow.org/guide/using_gpu"> [3]</a></sup></h2>
           <p class="text-black-100" style="text-align: justify;">Since our project requires the study of human behaviour pattern in image, so we decided to have a research on TensorFlow based on GPU. We are thinking this open source library will be one of the essential components to link to our image recognition. In more details, we believe this component can help the machine to point out what postures are shown in the image by feeding the information about in what pattern of x and y coordinates can determine what postures it is.</p>
           <br>
-          <h2 align="left">Tf-pose-estimation</h2>
+          <h2 align="left">Tf-pose-estimation<sup style="font-size: 1rem;"><a href="https://github.com/ildoonet/tf-pose-estimation"> [7]</a></sup></h2>
           <p class="text-black-100" style="text-align: justify;">This is a github repositroy developed by IIdoo Kim. 'Openpose' for human pose estimation have been implemented using TensorFlow. We decided to use this library because it combines tensorflow and openpose together to allow us to run them with the input of image, video and webcam. We are thinking to alter the code and to put the model that we trained into it, so that the whole program will use our model to detect what posture is showing rather than using the model graph from opensource library.</p>
           <br>
           <h2 align="left">Anaconda</h2>
           <p class="text-black-100" style="text-align: justify;">This is for creating custom python environment to do the version control. At the start, we are thinking to create three different python environment for posture, item and face recognition to avoid library version collision.</p>
           <br>
-          <h2 align="left">Scikit-learn</h2>
+          <h2 align="left">Scikit-learn<sup style="font-size: 1rem;"><a href="https://scikit-learn.org/stable/"> [8]</a></sup></h2>
           <p class="text-black-100" style="text-align: justify;">This is a python library which allows us to perform machine learning. We are interested in the part about classification and model selection. Therefore, we are thinking if it can help us generate a model to classify the human actions.</p>
           <br>
-          <h2 align="left">MLPclassifier</h2>
+          <h2 align="left">MLPclassifier<sup style="font-size: 1rem;"><a href="https://scikit-learn.org/stable/modules/neural_networks_supervised.html"> [4]</a></sup></h2>
           <p class="text-black-100" style="text-align: justify;">It stands for Multilayer Perceptron Classifier. It is one of components in one of the python libraries called sklearn. It is a classifier which learns algorithm or functions by training on a dataset. The classifier requires dataset and will generate a PKL file which enables objects to be serialized to files on disk and deserialized back into the program at runtime.</p>
           <br>
-          <h2 align="left">AdaBoost</h2>
+          <h2 align="left">AdaBoost<sup style="font-size: 1rem;"><a href="https://machinelearningmastery.com/boosting-and-adaboost-for-machine-learning/"> [5]</a></sup></h2>
           <p class="text-black-100" style="text-align: justify;">It is also a classifier,but it is an alternative way to train the machine learning model, and it is used to boost the performance of decision trees on binary classification problems.</p>
           <br>
-          <h2 align="left">Gradient Boosting Trees</h2>
+          <h2 align="left">Gradient Boosting Trees<sup style="font-size: 1rem;"><a href="https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.GradientBoostingClassifier.html"> [6]</a></sup></h2>
           <p class="text-black-100" style="text-align: justify;">It is the third classifier we chose to apply on training posture recognition. In terms of the difference from other classifers, it produces decision trees in order to optimise an arbitrary differentiable loss function.</p>
           <br>
           <br>
@@ -277,13 +277,13 @@
           <h2 align="left">Apache</h2>
           <p class="text-black-100" style="text-align: justify;">The files which we used to write image recognition and machine learning will mainly be written in python. Since we do not have requirement on building fasinating and functional web UI and the application requires extensive communication with the Linux server, we are thinking to use PHP to show our demonstration on our AI.</p>
           <br>
-          <h2 align="left">Mod_wgi</h2>
+          <h2 align="left">Mod_wgi<sup style="font-size: 1rem;"><a href="https://modwsgi.readthedocs.io/en/develop/"> [10]</a></sup></h2>
           <p class="text-black-100" style="text-align: justify;">It is an potential apache extension which we are going to use in order to communicate with the python files.</p>
           <br>
           <h2 align="left">Django</h2>
           <p class="text-black-100" style="text-align: justify;">Since most files we implemented for the image recognition are in python, we are also thinking using Django would be a good solution to execute the image recognition from the webserver</p>
           <br>
-          <h2 align="left">Navigator.mediaDevices JS library</h2>
+          <h2 align="left">Navigator.mediaDevices JS library<sup style="font-size: 1rem;"><a href="https://developer.mozilla.org/en-US/docs/Web/API/Navigator/mediaDevices"> [9]</a></sup></h2>
           <p class="text-black-100" style="text-align: justify;">This is one of the ways to access the webcam from the web application throught JS, and we are thinking to use it to put the webcam snapshot and live-video into the webserver, so that we can use it as an input to process the image recognition.</p>
           <br>
           <br>
