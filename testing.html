@@ -111,7 +111,25 @@
         <div class="col-lg-12 text-center">
           <h1 class="section-heading text-uppercase">Testing Strategy</h1>
           <p class="line"></p>
-          <p class="text-black-100" style="text-align: justify;" >Description</p>
+          <p class="text-black-100" style="text-align: justify;" >There two main parts that we have to test for our application:</p>
+          <br>
+          <p class="text-black-100" style="text-align: justify;" ><b><u>Web Application</u></b>:
+            <br>
+          In here, we will test its compatibility and the performance. As we mentioned in the design section, we have two web applications which are hosted in AzureVM and local. We will test if all the functionalities from them can be used in different web browser. In terms of performance, we will use <b>FireFox</b> to test how fast the image recognition can process based on different types of input(image, video and live-streaming).
+          </p>
+          <br>
+          <p class="text-black-100" style="text-align: justify;"><b><u>Image Recognition:</u></b></p>
+          <ul class="text-black-100" style="text-align: justify;">
+            <li>Posture Recognition</li>
+            <li>Face Recognition</li>
+          </ul>
+          <p class="text-black-100" style="text-align: justify;">In the design session, we can see that only the Item Recognition is an API, and others are SDK. The Item Recognition is using Google Vision API, therefore, there is no need to test its accuracy.
+            <br>
+            <br>
+          For Face and Posture Recognition, we will apply unit and integration testing to them. In unite and integration testing, we will describe how we create the models, select the best model and test the model selected.
+            <br>
+            <br>
+          Finally, we will list out the compatibility of each recognition for each input type.</p>
         </div>
       </div>
     </section>
@@ -126,19 +144,6 @@
         </div>
       </div>
     </section>
-
-
-
-    <section id="unit" class="projects-section bg-light">
-      <div class="container">
-        <div class="col-lg-12 text-center">
-          <h1 class="section-heading text-uppercase">Unit and Integration Testing</h1>
-          <p class="line"></p>
-          <p class="text-black-100" style="text-align: justify;" >Description</p>
-        </div>
-      </div>
-    </section>
-
 
     <section id="compatibility" class="projects-section bg-light">
       <div class="container">
