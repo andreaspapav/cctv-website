@@ -244,7 +244,69 @@
         <div class="col-lg-12 text-center">
           <h1 class="section-heading text-uppercase">Performance</h1>
           <p class="line"></p>
-          <p class="text-black-100" style="text-align: justify;" >Description</p>
+          <br>
+          <h2 align="left"><u>AzureVM Integration</u></h2>
+          <p class="text-black-100" style="text-align: justify;" >Here we are testing the efficiency of the whole image recognition when it deals with different type and size of inputs from the web application. We are using a timer to measure the processing time and take the average of the three measurement for each field.</p>
+          <br>
+          <table>
+            <tr>
+              <th></th>
+              <th>480p</th>
+              <th>720p</th>
+              <th>1080p</th>
+            </tr>
+            <tr>
+              <td style="text-align: center;">jpg</td>
+              <td style="text-align: center;">5.75sec</td>
+              <td style="text-align: center;">6.44sec</td>
+              <td style="text-align: center;">8.36sec</td>
+            </tr>
+            <tr>
+              <td style="text-align: center;">mp4 (3sec)</td>
+              <td style="text-align: center;">0min 43.6sec</td>
+              <td style="text-align: center;">1min 54.64sec</td>
+              <td style="text-align: center;">4min 01.67sec</td>
+            </tr>
+          </table>
+          <br>
+          <p class="text-black-100" style="text-align: justify;" >Here is the performance table of processing the image and the 3 second of the video. The images have the same content but with different resolution, and the same as the video. The reason why we are using 3 secs of video is because the image recognition takes a long time to process, and the problem mostly came from the Posture Recognition. The Posture Recognition analyse each frame from the video, hence, the more resolution you have in the video, the slower you will get from the overall performance.
+            <br>
+            <br>
+          The following is the specification of the AzureVM:
+          </p>
+          <ul class="text-black-100" style="text-align: justify;">
+            <li>CPU: Intel Xeon® E5-2690 v3 2.60GHz processor</li>
+            <li>Ram: 56GB</li>
+            <li>SSD: 340GB</li>
+            <li>GPU: one-half K80 card with 12GB</li>
+          </ul>
+          <br>
+          <br>
+          <h2 align="left"><u>Local Live Integration</u></h2>
+          <br>
+          <table>
+            <tr>
+              <th></th>
+              <th>Posture</th>
+              <th>Face & Item</th>
+            </tr>
+            <tr>
+              <td style="text-align: center;">Live Streaming</td>
+              <td style="text-align: center;"><=0.2FPS</td>
+              <td style="text-align: center;">10FPS</td>
+            </tr>
+          </table>
+          <br>
+          <p class="text-black-100" style="text-align: justify;">This table shows the overall performance of the real-time posture recognition and face/item recognition.
+            <br>
+            <br>
+          The following is the specification of the computer running the live streaming image recognition:
+          </p>
+          <ul class="text-black-100" style="text-align: justify;">
+            <li>CPU: i7 3.5GHz </li>
+            <li>Ram: 16GB</li>
+            <li>GPU: Intel Iris plus Graphics 650 1.5GB</li>
+          </ul>
         </div>
       </div>
     </section>
