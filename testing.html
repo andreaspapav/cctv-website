@@ -140,7 +140,27 @@
         <div class="col-lg-12 text-center">
           <h1 class="section-heading text-uppercase">Unit and Integration testing</h1>
           <p class="line"></p>
-          <p class="text-black-100" style="text-align: justify;" >Description</p>
+          <h2 align="left"><u>Posture Recognition</u></h2>
+          <p class="text-black-100" style="text-align: justify;" >As we mentioned, using this SDK requires you to have a model. So far, We trained 25 models with different datasets and classifiers. There are three different categories of samples we gathered for generating datasets, one is purely using the image samples from opensource photo library which is showing sitting, standing and laying, the second category is using the photos we took by using camera and the other is having the first two categories together. We found that it is not necessary that the more samples we have, the more accurate AI can be. It really depends on how classifiers calculate the data and the accuracy of the photo samples. However, the sample size has to be greater than 15 in order to process the classification to generate a model.</p>
+          <div class="row">
+            <div class="column">
+              <p class="text-black-100" style="text-align: justify;" >After we got all the models, we use 3 different types of human actions image "sitting" "standing" "laying", and you can see from the right, each type has quantity of three. The testing images are the mixed of opensource photos and the photos we took from camera for testing models. 'y' means successfully recognise the posture, 'n' means failure. 'st' means 'standing', 'si' means 'sitting' and 'la' means 'laying'. The models name labelled at the top are all trained by MLPclassifier. As a result, we found that 'training4' model is the most accurate.</p>
+            </div>
+            <div class="column">
+              <img class="sketch" src="img/testing/model_select.png" style="width: 100%">
+            </div>
+          </div>
+          <br>
+          <div class="row">
+            <div class="column">
+              <p class="text-black-100" style="text-align: justify;">After we selected the model, we used Graident Boosted Tree and Adaboost classifier to generate the models with the same datasets trained for 'training4'. Finally, we compare the accuracy among the three classifiers. As a result, the model generated from MLP classifier has the best overall performance.</p>
+            </div>
+            <div class="column">
+              <img class="sketch"src="img/testing/model_test.png" style="width: 100%">
+            </div>
+          </div>
+          <br>
+          <p class="text-black-100" style="text-align: justify;">Although none of the models recognise the standing image, we used another few standing images, the model we selected partly recognised them correctly.</p>
         </div>
       </div>
     </section>
@@ -150,7 +170,70 @@
         <div class="col-lg-12 text-center">
           <h1 class="section-heading text-uppercase">Compatibility</h1>
           <p class="line"></p>
-          <p class="text-black-100" style="text-align: justify;" >Description</p>
+          <h2 class="section-heading text-uppercase"><u>Web Application</u></h2>
+          <br>
+          <h2 align="left"><u>AzureVM Integration</u></h2>
+          <br>
+          <p class="text-black-100" style="text-align: justify;">Here we are testing the compatibility of the webapp hosted in AzureVM with different web-browser:</p>
+          <table>
+            <tr>
+              <th></th>
+              <th>Image Upload</th>
+              <th>Webcam Snapshot</th>
+              <th>Video</th>
+            </tr>
+            <tr>
+              <td style="text-align: center;">Google Chrome</td>
+              <td style="text-align: center;">Yes</td>
+              <td style="text-align: center;">No</td>
+              <td style="text-align: center;">Yes</td>
+            </tr>
+            <tr>
+              <td style="text-align: center;">Safari</td>
+              <td style="text-align: center;">Yes</td>
+              <td style="text-align: center;">No</td>
+              <td style="text-align: center;">Yes</td>
+            </tr>
+            <tr>
+              <td style="text-align: center;">FireFox</td>
+              <td style="text-align: center;">Yes</td>
+              <td style="text-align: center;">Yes</td>
+              <td style="text-align: center;">Yes</td>
+            </tr>
+          </table>
+          <br>
+          <p class="text-black-100" style="text-align: justify;">The first row are the functionalities of the webapp. As you can see from the table, only the <b>FireFox</b> is able to perform all the functionalities. The reason why the webcam does not work in the others is because the webcam JS library we used require the website to be HTTPS, therefore, the webcam cannot ask for the permission to access the computer webcam usb.</p>
+          <br>
+          <h2 class="section-heading text-uppercase"><u>Image Recognition</u></h2>
+          <br>
+          <table>
+            <tr>
+              <th></th>
+              <th>jpg</th>
+              <th>mp4</th>
+              <th>live streaming</th>
+            </tr>
+            <tr>
+              <td style="text-align: center;">Posture Recognition</td>
+              <td style="text-align: center;">Yes</td>
+              <td style="text-align: center;">Yes</td>
+              <td style="text-align: center;">Yes</td>
+            </tr>
+            <tr>
+              <td style="text-align: center;">Face Recognition</td>
+              <td style="text-align: center;">No</td>
+              <td style="text-align: center;">Yes</td>
+              <td style="text-align: center;">Yes</td>
+            </tr>
+            <tr>
+              <td style="text-align: center;">Item Recognition</td>
+              <td style="text-align: center;">Yes</td>
+              <td style="text-align: center;">Yes</td>
+              <td style="text-align: center;">Yes</td>
+            </tr>
+          </table>
+          <br>
+          <p class="text-black-100" style="text-align: justify;">Here we are testing the compatibility of the backend with different input. From the table, we can see that only the Face Recognition is not compatible with image input.</p>
         </div>
       </div>
     </section>

@@ -107,33 +107,43 @@
               <div class="col-lg-12 text-center">
                 <h1 class="section-heading text-uppercase">System Architecture</h1>
                 <p class="line"></p>
-                <p class="text-black-100" style="text-align: justify;" ><b>- Azure Cloud:</b></p>
-                <p class="text-black-100" style="text-align: justify;" >It is the platform which provides virtual machine allowing us to deploy our application and route the website to the world.</p>
                 <br>
-                <p class="text-black-100" style="text-align: justify;" ><b>- Linux Virtual Machine:</b></p>
+                <p class="text-black-100" style="text-align: justify;" >Here we will show two system architecture for our applications:</p>
+                <ul class="text-black-100" style="text-align: justify;">
+                  <li>AzureVM Integration</li>
+                  <li>Local Live Integration</li>
+                </ul>
+                <p class="text-black-100" style="text-align: justify;">The reason why we have two systems are the followings:</p>
+                <ul class="text-black-100" style="text-align: justify;">
+                  <li>We did not manage to bring live streaming functionality into the AzureVM while we are heavily developing our Image Recognition.</li>
+                  <li>It is too expensive to analyse multiple IP cameras in real-time with Image Recognition. This can come from the network latency, GPU performance, multi-threading and concurrency.</li>
+                </ul>
+                <br>
+                <h2 class="section-heading text-uppercase"><u>AzureVM Integration</u></h2>
+                <img class="sketch" src="img/design/AzureVM_brief.png" style="width: 100%">
+                <p class="text-black-100" style="text-align: justify;" ><b>- AzureVM:</b></p>
                 <p class="text-black-100" style="text-align: justify;" >This is the machine we rent from Azure, which allows us to have a powerful GPU to run our image recogitions and route the website to the world by opening port 80</p>
                 <br>
-                <p class="text-black-100" style="text-align: justify;" ><b>- Image Recognition</b></p>
+                <p class="text-black-100" style="text-align: justify;" ><b>- Image Recognition AI</b></p>
                 <p class="text-black-100" style="text-align: justify;" >This is a package including the posture, item and face recognition.</p>
                 <br>
-                <p class="text-black-100" style="text-align: justify;" ><b>- Posture Recognition</b></p>
+                <p class="text-black-100" style="text-align: justify;" ><b>- Posture SDK</b></p>
                 <p class="text-black-100" style="text-align: justify;" >It uses openpose and tensorflow to perform the posture and human detection in a frame and machine learning of recognising standing, sitting and laying.</p>
                 <br>
-                <p class="text-black-100" style="text-align: justify;" ><b>- Face Recognition</b></p>
-                <p class="text-black-100" style="text-align: justify;" >Description</p>
+                <p class="text-black-100" style="text-align: justify;" ><b>- Face SDK</b></p>
+                <p class="text-black-100" style="text-align: justify;" >It can catch human face and recognise the person with the trained model</p>
                 <br>
-                <p class="text-black-100" style="text-align: justify;" ><b>- Item Recognition</b></p>
-                <p class="text-black-100" style="text-align: justify;" >Description</p>
+                <p class="text-black-100" style="text-align: justify;" ><b>- Item API</b></p>
+                <p class="text-black-100" style="text-align: justify;" >It uses Google Vision API to recognise items surrounded.</p>
                 <br>
-                <p class="text-black-100" style="text-align: justify;" ><b>- Apache</b></p>
+                <p class="text-black-100" style="text-align: justify;" ><b>- Apache Webserver</b></p>
                 <p class="text-black-100" style="text-align: justify;" >This is the webserver which mainly runs PHP, and our web application is mainly written in PHP. In addition, it has a high compatibility to access the Linux server and modify the filesystem in order to execute the image recognition.</p>
                 <br>
-                <p class="text-black-100" style="text-align: justify;" ><b>- Object Storage Directory</b></p>
+                <p class="text-black-100" style="text-align: justify;" ><b>- Object Storage</b></p>
                 <p class="text-black-100" style="text-align: justify;" >This is the directory in the Linux Filesystem, and it stores the input of images and videos from the user and the output of log files and videos from the image recognition.</p>
                 <br>
-                <p class="text-black-100" style="text-align: justify;" ><b>- User</b></p>
-                <p class="text-black-100" style="text-align: justify;" >The user can upload their images, snapshot from webcam and video to the webapp and analyse the inputs through the image recognition.</p>
 
+                <h2 class="section-heading text-uppercase"><u>Local Live Integration</u></h2>
               </div>
             </div>
           </section>
