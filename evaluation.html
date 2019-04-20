@@ -148,15 +148,18 @@
             <p class="text-black-100" style="text-align: justify;">Further develop the current web application in Azure which can allow the user to input the images sample and then create the model using Multi Layer Perception classifier in order to achieve machine learning by using their own samples. Finally, the user then can select the model they generated to process the image recognition. In the current stage, since the item recognition is using Google Vision API, this functionality is only capable for face and posture recognition. The ultimate goal for this part is having login authentication features to allow multiple users to upload the samples and train the model together.</p>
             <br>
             <h2 align="left"><u>Live Video</u></h2>
-            <p class="text-black-100" style="text-align: justify;">Since the live video can only be tested on webcam in local server, it is better to be implemented as connecting the IP cameras which can be provided by the Camden Council. In addition, this feature should be combined with the web application running in AzureVM.</p>
+            <p class="text-black-100" style="text-align: justify;">Flask, Django is not designed for long time connection, and it is the same for the most other python framework we have to find a way to connect the web camera and system by hardware but not network to do the live stream AI Recognition.</p>
             <br>
             <br>
             <h2 class="section-heading text-uppercase"><u>Image Recognition</u></h2>
             <h2 align="left"><u>Posture Recognition</u></h2>
-            <p class="text-black-100" style="text-align: justify;">Firstly, Training new classifiers with sufficient data to extend the posture recognition capabilities. Secondly, adding new human posture to it. Secondly, increasing the precision on the existing posture that can be recognised by the machine.</p>
+            <p class="text-black-100" style="text-align: justify;">Firstly, Training new classifiers with sufficient data to extend the posture recognition capabilities. Secondly, adding new human posture to it. Secondly, increasing the precision on the existing posture that can be recognised by the machine. Finally, it would be great to activate a pop-up notification functionality when there is a fighting behaviour.</p>
             <br>
             <h2 align="left"><u>Face Recognition</u></h2>
+            <p class="text-black-100" style="text-align: justify;">When the OpenCV.js is open to self-implement faces library, we will replacing the back-end with the JavaScript commands</p>
+            <br>
             <h2 align="left"><u>Item Recognition</u></h2>
+            <p class="text-black-100" style="text-align: justify;">For the moment, it can only detect the top5 most significant items within the frame. It would be great to tweak the item recognition into instead of recognising all the items in a frame, finding dangerous items such as gun, knives would meet the expectation from Camden Council.</p>
           </div>
         </div>
       </section>
