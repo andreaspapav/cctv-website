@@ -197,7 +197,67 @@
         <div class="col-lg-12 text-center">
           <h1 class="section-heading text-uppercase">Deployment Manual</h1>
           <p class="line"></p>
-          <p class="text-black-100" style="text-align: justify;" >Description</p>
+          <br>
+          <h2 class="section-heading text-uppercase"><u>AzureVM Integration</u></h2>
+          <br>
+          <p class="text-black-100" style="text-align: justify;" >This session has 4 sections to deploy:</p>
+          <ul class="text-black-100" style="text-align: justify;">
+            <li>AzureVM</li>
+            <li>Linux Server Configuration</li>
+            <li>Posture Recognition Installation</li>
+            <li>Face/Item Recognition Installation</li>
+          </ul>
+          <br>
+          <h2 align="left">AzureVM</h2>
+          <p class="text-black-100" style="text-align: justify;">Login to the Azure Dashboard, and deploy a ubuntu virtual machine. In details, please make sure the following:</p>
+          <ul class="text-black-100" style="text-align: justify;">
+            <li>open the port for ssh, http and https</li>
+            <li>GPU family virtual machine</li>
+            <li>Attaching an additional block storage disk to the VM</li>
+          </ul>
+          <br>
+          <h2 align="left">Linux Server Configuration</h2>
+          <p class="text-black-100" style="text-align: justify;">After you start running the Ubuntu virtual machine, make sure you first refresh the apt-get repository, and then install the followings:</p>
+          <ul class="text-black-100" style="text-align: justify;">
+            <li>php</li>
+            <li>Anaconda</li>
+            <li>swig</li>
+            <li>apache2</li>
+            <li>essential-tools</li>
+            <li>ffmpeg</li>
+          </ul>
+          <p class="text-black-100" style="text-align: justify;">After the installation, perform the followings:</p>
+          <ul class="text-black-100" style="text-align: justify;">
+            <li>git clone out 'sapient' repository</li>
+            <li>setting the default directory of the apache to be '/var/www/sapient/Web'</li>
+            <li>sudo chown www-data:www-data /var/www/</li>
+            <li>sudo chmod 755 -R /var/www/</li>
+            <li>adding your current user to www-data group</li>
+          </ul>
+          <br>
+          <h2 align="left">Posture Recognition</h2>
+          <p class="text-black-100" style="text-align: justify;">The following is the installation guide:</p>
+          <ul class="text-black-100" style="text-align: justify;">
+            <li>conda create -n posture python=3.6 pip</li>
+            <li>source activate posture</li>
+            <li>pip install -r requirements.txt (inside the tf-pose-estimation directory)</li>
+            <li>pip install tensorflow</li>
+            <li>pip install opencv-python pandas sklearn numpy</li>
+            <li>cd tf_pose/pafprocess</li>
+            <li>swig -python -c++ pafprocess.i && python setup.py build_ext --inplace</li>
+          </ul>
+          <br>
+          <h2 align="left">Face & Item Recognition</h2>
+          <p class="text-black-100" style="text-align: justify;">The following is the installation guide:</p>
+          <ul class="text-black-100" style="text-align: justify;">
+            <li>source activate posture</li>
+            <li>pip install -r requirements.txt</li>
+            <li>pip install google-cloud-vision</li>
+            <li>export GOOGLE_APPLICATION_CREDENTIALS="/var/www/sapient/FaceItem/service-account-file.json"</li>
+          </ul>
+          <br>
+          <h2 align="left">Additional</h2>
+          <p class="text-black-100" style="text-align: justify;">If you find any further installation issue, please contact <i>Shiko Azuma</i></p>
         </div>
       </div>
     </section>
