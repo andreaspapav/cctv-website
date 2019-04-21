@@ -13,3 +13,18 @@
 	color: #3c6360;
 	font-weight: bold;
 }
+
+.achievements_table{
+	width: 100%;
+	padding: 1rem;
+}
+
+.bug_list{
+	width: 100%;
+	padding: 1rem;
+}
+
+.contribution_table{
+	width: 100%;
+	padding: 1rem;
+}
