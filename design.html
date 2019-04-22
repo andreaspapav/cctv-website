@@ -144,6 +144,23 @@
                 <br>
 
                 <h2 class="section-heading text-uppercase"><u>Local Live Integration</u></h2>
+                <!--<img src="img/systemArchitecture.png">-->
+                <p class="text-black-100" style="text-align: justify;" >
+                As we can see from the video/the system diagram. We successfully implemented all of these features, some by commercial API like a plug-in. and some by free SDK like a local machine.
+                For the video and image analysis, we deploy it onto the azure virtual machine which brings huge powers to analyse the video with the video and text report output, including the information like people detecting in the frame, top5 most significant items detected with confidence rate, people posture recognised.
+                </p>
+                <p class="text-black-100" style="text-align: justify;" >
+                It is using the Apache web server to communicate with the front-end and back-end web apps, people from different countries can access the website and using the recognition by the URL we are given. However, it is only for the video and images input.
+              </p>
+                <p class="text-black-100" style="text-align: justify;" >
+                We have implemented the live recognition by the other web server called Flask, it is powerful to run the python back-end. It offers opportunity to see how the future CCTV would looks like. It can detect the people, item and behaviours non-stopping and accurately.
+                </p>
+                <p class="text-black-100" style="text-align: justify;" >
+                The output video outlines the top5 most significant items within the frame with its name. It can also catch up the faces in the image/video and if the machine is confident with the result, it will show who it is.
+                </p>
+                <p class="text-black-100" style="text-align: justify;" >
+                For the posture recognition, it would draw the human body on the frame and brings the posture result in the form of text with the system time.
+                </p>
               </div>
             </div>
           </section>
@@ -186,7 +203,14 @@
               <div class="col-lg-12 text-center">
                 <h1 class="section-heading text-uppercase">Design Patterns</h1>
                 <p class="line"></p>
-                <p class="text-black-100" style="text-align: justify;" >Description</p>
+                <p class="text-black-100" style="text-align: justify;" >
+                  The design pattern is that the website should be very flxible to use for all of the reuiqres of the AI recognition. It accepts
+                  video uploading for recognition, image taken immediately for recognition and also the live stream taken by web camera immediately.
+                </p>
+                <p class="text-black-100" style="text-align: justify;" >
+                  The output of the recognition should also be obvious and in different forms like text or image sketching etc. It helps differnet groups
+                  of people to understand how fancy the technology it is, even readble by a child. That is the core of the whole system design
+                </p>
               </div>
             </div>
           </section>
