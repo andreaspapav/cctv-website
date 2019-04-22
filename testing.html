@@ -140,6 +140,30 @@
         <div class="col-lg-12 text-center">
           <h1 class="section-heading text-uppercase">Unit and Integration testing</h1>
           <p class="line"></p>
+          <p class="text-black-100" style="text-align: justify;">
+            The unittest class is used when developing the webapp, our project is about using the back-end to analyse the video
+            Therefore for most cases, the unit testing is hard to be done by code under the theory of TDD. The reason is that,
+            the video output have to be run and checked by human to see the exactly the AI information outline on the video
+            is correct which is not static at all, it changes every time by different cases
+          </p>
+          <p class="text-black-100" style="text-align: justify;">
+            Therefore when we were doing the development, most TDD is done by hand other than code. These unit testing is
+            just used to test the whole program can catch up the exception, or can run the video successfully.
+            For most functions tested in the unit test is now been disabled for real application, the reason is that
+            it is not worth to keep unit tests which cannot cover most cases, everything still need check by hand.
+            The unit test by code including user login, logout, run the video reading.
+          </p>
+
+          <p class="text-black-100" style="text-align: justify;">
+            The following paragraph will discuss how we implement the unit test by hand to build the app and how the integration test we took to see
+            the overall performance of the system
+          </p>
+
+          <p class="text-black-100" style="text-align: justify;">
+            We are using the integration test to seee the overall performance, especially the accuracy of the web app.
+            We found that the accuracy is always low. As said, we stopped by the point to have the dangerous information notification
+            system since we find the accuracy is low.
+          </p>
           <h2 align="left"><u>Posture Recognition</u></h2>
           <p class="text-black-100" style="text-align: justify;" >As we mentioned, using this SDK requires you to have a model. So far, We trained 25 models with different datasets and classifiers. There are three different categories of samples we gathered for generating datasets, one is purely using the image samples from opensource photo library which is showing sitting, standing and laying, the second category is using the photos we took by using camera and the other is having the first two categories together. We found that it is not necessary that the more samples we have, the more accurate AI can be. It really depends on how classifiers calculate the data and the accuracy of the photo samples. However, the sample size has to be greater than 15 in order to process the classification to generate a model.</p>
           <div class="row">
@@ -161,6 +185,19 @@
           </div>
           <br>
           <p class="text-black-100" style="text-align: justify;">Although none of the models recognise the standing image, we used another few standing images, the model we selected partly recognised them correctly.</p>
+
+          <h2 align="left"><u>Face Item Recognition</u></h2>
+          <p class="text-black-100" style="text-align: justify;">
+            We choose a ten-second video to test for the item and face recognition.
+            There are two people including in the video with one person has a small knives held by hand.
+            We found the face has been nicely detected three time per second accurately within the range of 3 meters
+            and the deadly (small knives) never been recognised when it is 5 meters away from the camera. It shows that
+            how the AI CCTV far away from the real-world application at the moment.
+          </p>
+
+          <p class="text-black-100" style="text-align: justify;">
+            The accuracy and test cases will be discussed further in the following paragraph
+          </p>
         </div>
       </div>
     </section>
