@@ -168,7 +168,14 @@
               <div class="col-lg-12 text-center">
                 <h1 class="section-heading text-uppercase">Sequence Diagram</h1>
                 <p class="line"></p>
-                <p class="text-black-100" style="text-align: justify;" >Description</p>
+                <img src="img/sequence_diagram.png" class="sequence_diagram">
+                <p class="text-black-100" style="text-align: justify;" >This is the sequence diagram for the local flask AI recognition, we do not have the sequence
+                  diagram for the azure Apache AI recognition, the reason is that they are quite similar to each other, also the local machine sequence diagram covers
+                   most of the cloud one but also with database, models and live stream features.
+                  In that diagram, we shows how does the web application upload the media onto the local machine and stream the live frame to the backend web apps.
+                  As an output, the results gained from the Google Cloud API for item recognition is the position of the top5 significant items within the frame with confidence rate.
+                  The results gained from the face recognition is the face rectangle and the name of the likely people on the frame compared with the library. The posture recognition has
+                  both the tensor detected by the frame and txt output with the posture guessing.</p>
               </div>
             </div>
           </section>
