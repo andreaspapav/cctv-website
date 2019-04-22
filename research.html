@@ -245,31 +245,31 @@
           <br>
           <h2 align="left">MLP vs Adaboost vs Gradient classifiers</h2>
           <p class="text-black-100" style="text-align: justify;">As I mentioned above, three classifiers have their own algorithm to create the model. After a few experiment, we found that each of the classifiers might be accurate in different patterns of datasets. Therefore, when we are creating the model for the posture recognition, we will generate three different models from three classifiers, and then we will compare which model is more accurate by inputing sample images displaying 'sitting', 'standing' and 'laying'.</p>
-          <br>
+          <br><br><br>
 
 
 
 
           <h2 class="section-heading text-uppercase"><u>Face Recognition</u></h2>
-          <br>
+          <br><br>
           <h2 align="left"><u>Techniques</u></h2>
           <br>
           <h2 align="left">Google Cloud Vision API</h2>
-          <p class="text-black-100" style="text-align: center;" >
+          <p class="text-black-100" style="text-align: justify;">
             Google Cloud offers face recognition which covers the famous people as well.
             Google holds the face library and return the greatest similar person's name for face recognition request.
             It has two computer vision products that use machine learning to help you understand your images with industry-leading prediction accuracy.
             The google cloud vision API can use do the self training model but not for face recognition.
-          </p>
+          </p><br>
 
 
           <h2 align="left">Microsoft Face Recognition API</h2>
-          <p class="text-black-100" style="text-align: center;" >
+          <p class="text-black-100" style="text-align: justify;">
             The Microsoft Face API uses state-of-the-art cloud-based face algorithms to detect and recognise human faces in images. Capabilities include features like face detection, face verification and face grouping to organise faces into groups based on their visual similarity.
-          </p>
+          </p><br>
 
           <h2 align="left"></h2>
-          <p class="text-black-100" style="text-align: center;" >
+          <p class="text-black-100" style="text-align: justify;">
             OpenCV is an open-source SDK for AI recognition, it (Open Source Computer Vision) is a popular computer vision library started by Intel in 1999.
             It can used to create self defined library and reconise the people, face, smile and lots of information on faces.
           </p>
@@ -277,12 +277,12 @@
           <h2 align="left"><u>Comparison</u></h2>
           <br>
           <h2 align="left">OpenCV VS Google Cloud VS Microsoft</h2>
-          <p class="text-black-100" style="text-align: center;" >
+          <p class="text-black-100" style="text-align: justify;">
             When we developing the software, we have tested almost all of the recognitions. With the accuracy, price and networking requirements, we eventually choose
             the OpenCV and move it forward with our project. The most significant reason is that it is not necessary to detect famous people (by google cloud vision), but
             it requires easy to self defined the model to add new people into it. Also the face recognition is becoming popluar now which also means the technology is good
             enough for most cases, it is worth to use the open-source now because it is free and reliable.
-          </p>
+          </p><br><br><br>
 
 
 
@@ -292,16 +292,43 @@
           <h2 align="left"><u>Techniques</u></h2>
           <br>
 
-          <h2 align="left"></h2>
-          <p class="text-black-100" style="text-align: center;" >
-
+          <h2 align="left">Clarifai</h2>
+          <p class="text-black-100" style="text-align: justify;">
+            Clarifai, unlike any other API’s on this list, has the added bonus of video analysis. For videos, Clarifai offers scene recognition. For images, it can also do sentiment analysis, text recognition, logo detection, and face detection, as well as a more robust version of Resemble’s image attribute detection: brightness, colour, dominant colour.
           </p>
+          <p class="text-black-100" style="text-align: justify;">
+          It was able to recognize some key concepts (the first five are fairly accurate), but also added some irrelevant tags. No scarf, no child, no woman.
+          </p><br>
 
-          <h2 align="left"></h2>
-          <p class="text-black-100" style="text-align: center;" >
-
+          <h2 align="left">Google Cloud Vision</h2>
+          <p class="text-black-100" style="text-align: justify;">
+            Cloud Vision by Google includes many of the key features of Clarifai (sentiment analysis, text recognition, logo detection, facial analysis) and adds a couple of bonuses: landmark detection and a simple REST API.
           </p>
-          <br>
+          <p class="text-black-100" style="text-align: justify;">
+            Unlike Clarifai, you can’t create your own models to test against — but you also have access to an API backed by Google, one they seem quite dedicated to constantly improving.
+          </p><br>
+
+          <h2 align="left">Amazon Recognition</h2>
+          <p class="text-black-100" style="text-align: justify;">
+            By now, the features will sound familiar: scene detection, sentiment analysis. Amazon boasts of a more robust suite of facial analysis tools, including facial recognition (not offered by Google or Clarifai) across images, and detailed information like image quality of face, beard recognition (yes), and facial comparison (how likely is it that two faces are the same person?).
+          </p>
+          <p class="text-black-100" style="text-align: justify;">
+            Unlike Clarifai, you can’t create your own models to test against — but you also have access to an API backed by Google, one they seem quite dedicated to constantly improving.
+          </p><br><br>
+
+          <h2 align="left"><u>Comparison</u></h2>
+          <h2 align="left">Google Cloud VS Amazon Recognition VS Clarify</h2>
+          <p class="text-black-100" style="text-align: justify;">
+            It is quite clear as mentioned above, the item recognition does not need to self define the library since it would takes decades to include
+            all of the kind of the things.
+          </p>
+          <p class="text-black-100" style="text-align: justify;">
+            Item recognition is still a big and hot problem within the AI industry it indicates that the accuracy would be always low or the items can be detected would be very limited.
+            Therefore, we are going to use the Google API with only top5 items to output to avoid any wrong messages may produced. Just ignore about the SDK, it is still to early to use the
+            open-source to do the item recognition for current phase.
+          </p><br><br><br>
+
+
 
 
 
@@ -380,6 +407,7 @@
           <p class="text-black-100" style="text-align: justify;">
             In Django, the web server accepts an incoming request, sets up a WSGI dictionary which then is passed to the application server. There the HTTP headers and the payload is created and immediately afterwards the request is finished and flushed to the client. This processing typically requires a few dozen milliseconds. The throughput, such a server can handle, is the average response time multiplied by the number of concurrent workers. Each worker requires its own thread/process and a good rule of thumb is to configure not more than twice as many workers as the number of cores available on that host. Otherwise you will see a decrease in overall performance, caused by too many context switches, for which the scheduler of the operating system is responsible. Due to this workflow, it is almost impossible to add support for long term connections, such as websockets, on top of the WSGI protocol specification. Therefore most websocket implementations go for another approach. The websocket connection is controlled by a service running side by side with the default application server. Here, a webserver with support for long term connections, dispatches the requests from the clients. (From django-websocket-redis documentation, refrence at the bottom)
           </p>
+          <br>
 
           <h2 align="left">uWSGI or aWSGI, chat application for live-stream testing</h2>
           <p class="text-black-100" style="text-align: justify;">
@@ -448,7 +476,7 @@
               <br>
               <li align="left" ><h4>Google Cloud Vision Documentation </h4><a href="https://cloud.google.com/docs/">[13] https://cloud.google.com/docs/</a></li>
               <br>
-              <li align="left" ><h4> </h4><a href="">[14] </a></li>
+              <li align="left" ><h4>The 3 best image analysis API</h4><a href="https://engineering.musefind.com/we-compared-the-3-best-image-analysis-apis-here-s-what-we-learned-2d54cff5ae62">[14] https://engineering.musefind.com/we-compared-the-3-best-image-analysis-apis-here-s-what-we-learned-2d54cff5ae62</a></li>
               <br>
               <li align="left" ><h4> </h4><a href="">[15] </a></li>
               <br>
