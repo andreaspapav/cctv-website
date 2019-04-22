@@ -119,11 +119,46 @@
         <div class="container">
           <div class="col-lg-12 text-center">
             <h1 class="section-heading text-uppercase">Critical Evaluation</h1>
-            <p class="line"></p>
+            <p class="line">
+              This section is about the critical points of our project, including User Experience, functionality, stability and efficiency.
+              We will discuss all about the details of our project in that section for future development and anyone have interest in.
+            </p>
             <h2 class="section-heading text-uppercase"><u>User Experience</u></h2>
+            <p class="text-black-100" style="text-align: justify;">
+              The user experience is quite good since we have a really nice design of the web application, including the UI, the page layout
+              and the color scheme. However the speed of the posture recognition is too slow which makes people misunderstand it is working not
+              shut down. We should including a notification said that 'please go and grab a cofffee then come back to see th results'.
+            </p>
+            <p class="text-black-100" style="text-align: justify;">
+              Also, for the item recognition, the notation of the items detected by the system flash quickly which makes hard to catch up with.
+              The problem is that the item recognition cannot work for every frames, so it flash once by five or more frames going through. That is a
+              problem of the API, it cannot read video but only images.
+            </p>
+            <p class="text-black-100" style="text-align: justify;">
+              These user experiecne feed back is important to our project. We will fix it if we have
+              time in the future.
+            </p>
             <h2 class="section-heading text-uppercase"><u>Functionality</u></h2>
+            <p class="text-black-100" style="text-align: justify;">
+              There are three recognitions has been implemented with our project. They are posture recognition, item recognition and face recognition. Posture recognition
+              detecting people's posture including sitting, standing and lying down. Face recognition recognise the people within the frames. Item recognition
+              outline the top5 the most significant items within the frame with name and confidence rate.
+            </p>
+            <p class="text-black-100" style="text-align: justify;">
+              The input form can be video uploading by azure virtual system, or live-stream input through web camera by the local flask web server.
+            </p>
             <h2 class="section-heading text-uppercase"><u>Stability</u></h2>
+            <p class="text-black-100" style="text-align: justify;">
+              If the uploading video is too long, the recognition system will shut down since the web browser cannot wait for few minutes long response,
+              it is caused by the natural of web server application, they have a maximum responsing time, if the back-end system took too long to return the
+              response, it will lost connection and ask the user to refresh the page. We have not fond a efficient way to fix that problem, however if we are using the live
+              stram on local to play the AI recognition, there won't be any problem with the responsing time since it continuously keep connecting and disconnecting, response with one
+              analysis frame at each time.
+            </p>
             <h2 class="section-heading text-uppercase"><u>Efficiency</u></h2>
+            <p class="text-black-100" style="text-align: justify;">
+              We choose a ten-second video to test for the item and face recognition. There are two people including in the video with one person has a small knives held by hand. We found the face has been nicely detected three time per second accurately within the range of 3 meters and the deadly (small knives) never been recognised when it is 5 meters away from the camera. It shows that how the AI CCTV far away from the real-world application at the moment.
+            </p>
             <br>
             <p class="text-black-100" style="text-align: justify;"></p>
             <h2 class="section-heading text-uppercase"><u>Compatibility</u></h2>
