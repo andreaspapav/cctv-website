@@ -98,7 +98,7 @@
                   <a class="nav-link js-scroll-trigger" href="#review-existing">Review Existing Soultions</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link js-scroll-trigger" href="#related-technologies">Related Technologies</a>
+                  <a class="nav-link js-scroll-trigger" href="#related-technologies">Related Technologies And Comparison</a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link js-scroll-trigger" href="#summary">Summary of Final Decision</a>
@@ -189,7 +189,7 @@
     <section id="related-technologies" class="projects-section bg-light">
       <div class="container">
         <div class="col-lg-12 text-center">
-          <h1 class="section-heading text-uppercase">Related Technologies</h1>
+          <h1 class="section-heading text-uppercase">Related Technologies And Comparison</h1>
           <p class="line"></p>
           <br>
           <p class="text-black-100" style="text-align: justify;" >We separated the technology research areas into four parts, and the first three elements are for the Image Recognition and the last elements are for the integration and deployment:
@@ -310,6 +310,41 @@
 
 
           <h2 class="section-heading text-uppercase"><u>System Integration(Local)</u></h2>
+          <br>
+          <p class="text-black-100" style="text-align: justify;">
+            In this section, we will discuss what we find out how the web server (framework) to support the python-backend, why it is woth to try the
+            Django or Flask.
+          </p>
+          <p class="text-black-100" style="text-align: justify;">
+            We will also mentioned about the connection of the front-end and back-end since it is the key to implement the live stream.
+          </p>
+          <br><br>
+
+          <h2 align="left">Why we need a python framework</h2>
+          <p class="text-black-100" style="text-align: justify;">
+            So What are the differences between a python framework to Apache? When we are doing the live-stream, we have to consider choose a python framework to deal with backend recognition app. The reason is that, the project is building on the last team’s Posture Recognition app which is written on Python. The other reason is that it is hard to run the python back-end with the front-end web page for live-stream and live-recognition purpose. We were experienced a long way to eventually successfully implemented that features by flask, from the start, we were using the Django. The following paragraph in that section will discuss the difficulties we met when doing with Django and flask. Hope it brings some insights for code review and future development by other teams. Some problems we faced may be not hard to cover, but we stopped at that point, please contact us if you are facing the same problems and has better solutions
+          </p>
+          <br>
+
+          <h2 align="left">What is the websocket</h2>
+          <p class="text-black-100" style="text-align: justify;">
+            The websocket is a web app communications protocol, providing full-duplex communication channels over a single TCP connection.
+          </p>
+          <br>
+
+          <h2 align="left">The WSGI protocol cannot support websockets</h2>
+          <p class="text-black-100" style="text-align: justify;">
+            In Django, the web server accepts an incoming request, sets up a WSGI dictionary which then is passed to the application server. There the HTTP headers and the payload is created and immediately afterwards the request is finished and flushed to the client. This processing typically requires a few dozen milliseconds. The throughput, such a server can handle, is the average response time multiplied by the number of concurrent workers. Each worker requires its own thread/process and a good rule of thumb is to configure not more than twice as many workers as the number of cores available on that host. Otherwise you will see a decrease in overall performance, caused by too many context switches, for which the scheduler of the operating system is responsible. Due to this workflow, it is almost impossible to add support for long term connections, such as websockets, on top of the WSGI protocol specification. Therefore most websocket implementations go for another approach. The websocket connection is controlled by a service running side by side with the default application server. Here, a webserver with support for long term connections, dispatches the requests from the clients. (From django-websocket-redis documentation, refrence at the bottom)
+          </p>
+
+          <h2 align="left">uWSGI or aWSGI, chat application for live-stream testing</h2>
+          <p class="text-black-100" style="text-align: justify;">
+            We found a nice way to do is using the uWSGI by ‘django-websocket-redis’ or aWSGI by Channels, we are using the Channels with Django for testing.
+          </p>
+          <p class="text-black-100" style="text-align: justify;">
+            The live chat app which is quite similar to our project, just replacing the text by the media or non-stopping image sequences act as a video, so it is a nice entrance to the live stream system
+          </p>
+
 
 
 
